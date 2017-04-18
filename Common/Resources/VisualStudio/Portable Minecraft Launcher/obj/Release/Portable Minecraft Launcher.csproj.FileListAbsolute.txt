@@ -1,0 +1,2 @@
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Release\Portable Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Release\C# Minecraft Launcher.exe.config

@@ -1,0 +1,3 @@
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Debug\Portable Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Debug\QuickCraft - Portable.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Debug\C# Minecraft Launcher.exe.config

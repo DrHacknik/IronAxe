@@ -1,0 +1,25 @@
+C:\Users\Luke\Documents\Visual Studio 2015\Projects\Portable Minecraft Launcher\Portable Minecraft Launcher\bin\Debug\Portable Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\Portable Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\Portable Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\Portable Minecraft Launcher.pdb
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.Main.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\MinecraftPortable-v.1.0.5-beta\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.pdb
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\C# Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\C# Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\Debug\C# Minecraft Launcher.pdb
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_agreement.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_get_java.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_profile_create.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_profile_load.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_settings.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_start.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.Main.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable Minecraft Launcher.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\C# Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\MinecraftPortable\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\C# Minecraft Launcher.pdb

@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "(Default)": {
+      "name": "(Default)"
+    }
+  },
+  "selectedProfile": "(Default)",
+  "clientToken": "1973c610-43e9-4799-990c-be813375cc71",
+  "authenticationDatabase": {},
+  "launcherVersion": {
+    "name": "1.6.73-j",
+    "format": 18,
+    "profilesFormat": 1
+  }
+}
