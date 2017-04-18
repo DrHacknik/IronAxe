@@ -17,12 +17,12 @@ On top of that, it is built on the 32bit architecture. Meaning that it will be a
 * Now, load said profile. You can choose to load it with portable Java, or not. It may ask you if you want to set it as the default profile to load.
 * **Optional:** You can set within the settings to load the default profile automatically when the program starts.
 * Done! Just login to your account, and play!
-* **Optional:** Copy your .minecraft folder (%APPDATA%\.minecraft) from your computer to the profile's folder that you created, if you want your login info, versions, mods, worlds, etc.
+* **Optional:** Copy your .minecraft folder (%APPDATA%/.minecraft) from your computer to the profile's folder that you created, if you want your login info, versions, mods, worlds, etc.
 
 ## FAQ:
 
 
-* I get an error stating that "We cannot find the file minecraft.jar." If this is the case, use an existing one you may have, or download it via minecraft.net. Make sure this file is placed within the "/bin" directory in the folder for the application. If you cannot find the .jar file on Minecraft's website, or on your PC; use this link here.
+* I get an error stating that "We cannot find the file minecraft.jar." If this is the case, use an existing one you may have, or download it via minecraft.net. Make sure this file is placed within the "/bin" directory in the folder for the application. If you cannot find the .jar file on Minecraft's website, or on your PC; use this link ![here](https://github.com/zoltx23/IronAxe/raw/master/Common/Resources/Java_Launcher/minecraft.jar?raw=true) .
 * I get an error that has something to do with .NET Framework or a JIT error. Please report this error via GitHub in the issues section on the repository.
 
 ## Announcements: 
