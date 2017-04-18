@@ -14,6 +14,7 @@ namespace Portable_Minecraft_Launcher
 {
     public partial class dev_profile_load : Form
     {
+        private bool is64Bit = System.Environment.Is64BitOperatingSystem;
         private string cd = Application.StartupPath;
 
         public dev_profile_load()
@@ -23,6 +24,13 @@ namespace Portable_Minecraft_Launcher
 
         private void btn_load_Click(object sender, EventArgs e)
         {
+            if (is64Bit == true)
+            {
+                if (Directory.Exists(cd + "\\bin\\CommonFiles\\Java64"))
+                {
+                    Directory.Move(cd + "\\bin\\CommonFiles\\Java64", cd + "\\bin\\CommonFiles\\Java");
+                }
+            }
             if (Directory.Exists(cd + "\\data\\profiles\\" + txt_prof_name.Text) == false)
             {
                 MessageBox.Show("Unable to find the Profile you asked for. Please create this Profile first.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Error);

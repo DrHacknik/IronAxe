@@ -15,6 +15,7 @@ namespace Portable_Minecraft_Launcher
 {
     public partial class Main : Form
     {
+        private bool is64Bit = System.Environment.Is64BitOperatingSystem;
         private string cd = Application.StartupPath;
 
         public Main()
@@ -24,15 +25,22 @@ namespace Portable_Minecraft_Launcher
 
         private void Main_Load(object sender, EventArgs e)
         {
-            lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD";
-            this.Text = "IronAxe Minecraft Launcher: Main ";
-            if (Properties.Settings.Default.dev_download_res == "")
+            if (is64Bit == true)
             {
-                Form fm = new dev_get_java();
-                fm.Show();
+                lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | x64bit mode";
             }
             else
             {
+                lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD";
+                this.Text = "IronAxe Minecraft Launcher: Main ";
+                if (Properties.Settings.Default.dev_download_res == "")
+                {
+                    Form fm = new dev_get_java();
+                    fm.Show();
+                }
+                else
+                {
+                }
             }
         }
 

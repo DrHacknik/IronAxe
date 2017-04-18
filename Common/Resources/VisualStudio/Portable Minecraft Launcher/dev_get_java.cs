@@ -16,6 +16,7 @@ namespace Portable_Minecraft_Launcher
 {
     public partial class dev_get_java : Form
     {
+        private bool is64Bit = System.Environment.Is64BitOperatingSystem;
         private WebClient jv;
         private Stopwatch sw = new Stopwatch();
         private string cd = Application.StartupPath;
@@ -31,14 +32,24 @@ namespace Portable_Minecraft_Launcher
             {
                 File.Delete(cd + "\\jPortable_8_Update_121.paf.exe");
             }
-
+            if (File.Exists(cd + "\\jPortable64_8_Update_121.paf.exe"))
+            {
+                File.Delete(cd + "\\jPortable64_8_Update_121.paf.exe");
+            }
             //Prepare to Download Java
             WebClient client = new WebClient();
             client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
             client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
 
             //Starts the download
-            client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+            if (is64Bit == true)
+            {
+                client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+            }
+            else
+            {
+                client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+            }
 
             lbl_status.Text = "Download In Progress (JRE)";
         }
@@ -61,10 +72,17 @@ namespace Portable_Minecraft_Launcher
             {
                 if (File.Exists(cd + "\\jPortable_8_Update_121.paf.exe"))
                 {
-                    Process.Start(cd + "\\jPortable_8_Update_121.paf.exe");
+                    Process jv = new Process();
+                    jv.StartInfo.FileName = cd + "\\jPortable_8_Update_121.paf.exe";
+                    jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
+                    jv.Start();
                 }
                 else
                 {
+                    Process jv = new Process();
+                    jv.StartInfo.FileName = cd + "\\jPortable64_8_Update_121.paf.exe";
+                    jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
+                    jv.Start();
                 }
             }
             catch
@@ -84,7 +102,7 @@ namespace Portable_Minecraft_Launcher
             get_mc.DownloadFileCompleted += new AsyncCompletedEventHandler(getmc_DownloadFileCompleted);
 
             //Starts the download
-            get_mc.DownloadFileAsync(new Uri("https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"), cd + "\\bin\\minecraft.jar");
+            get_mc.DownloadFileAsync(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Resources/Java_Launcher/minecraft.jar?raw=true"), cd + "\\bin\\minecraft.jar");
         }
 
         private void getmc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

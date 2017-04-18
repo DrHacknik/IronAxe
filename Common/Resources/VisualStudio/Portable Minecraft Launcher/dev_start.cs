@@ -14,6 +14,7 @@ namespace Portable_Minecraft_Launcher
 {
     public partial class dev_start : Form
     {
+        private bool is64Bit = System.Environment.Is64BitOperatingSystem;
         private string cd = Application.StartupPath;
 
         public dev_start()
@@ -47,6 +48,17 @@ namespace Portable_Minecraft_Launcher
             mn.Show();
             tmr_int.Stop();
             Hide();
+        }
+
+        private void dev_start_Load(object sender, EventArgs e)
+        {
+            if (is64Bit == true)
+            {
+                if (Directory.Exists(cd + "\\bin\\CommonFiles\\Java64"))
+                {
+                    Directory.Move(cd + "\\bin\\CommonFiles\\Java64", cd + "\\bin\\CommonFiles\\Java");
+                }
+            }
         }
     }
 }

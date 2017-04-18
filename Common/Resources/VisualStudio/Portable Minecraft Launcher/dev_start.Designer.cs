@@ -107,6 +107,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dev_start";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.dev_start_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
