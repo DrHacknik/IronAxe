@@ -33,5 +33,11 @@ This build will correct some issues, and refine the interface.
 
 ## Versions: 
 
+### 1.5.2: 
+* Fixed some issues
+* Refined the interface
+* Now downloads the Minecraft.jar fine
+* Fixed some small bugs with Profiles management
+
 ### 1.5: 
 * Added basic functions
