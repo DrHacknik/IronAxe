@@ -55,7 +55,7 @@ namespace Portable_Minecraft_Launcher
         private void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             lbl_status.Text = "Download Completed";
-            lbl_status.Enabled = true;
+
             dev_tmr.Stop();
             try
             {
@@ -70,24 +70,41 @@ namespace Portable_Minecraft_Launcher
             catch
             {
             }
-            Properties.Settings.Default.dev_download_res = "1";
-            Properties.Settings.Default.Save();
-            this.Close();
+            dev_tmr2.Start();
         }
 
         private void dev_tmr2_Tick(object sender, EventArgs e)
         {
             dev_tmr2.Stop();
+            lbl_status.Text = "Download In Progress (MC)";
             //Prepare to Dowmnload Minecraft
             prog_down.Value = 0;
             WebClient get_mc = new WebClient();
-            get_mc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
-            get_mc.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+            get_mc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(getmc_DownloadProgressChanged);
+            get_mc.DownloadFileCompleted += new AsyncCompletedEventHandler(getmc_DownloadFileCompleted);
 
             //Starts the download
             get_mc.DownloadFileAsync(new Uri("https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"), cd + "\\bin\\minecraft.jar");
+        }
 
-            lbl_status.Text = "Download In Progress (MC)";
+        private void getmc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+
+            prog_down.Value = int.Parse(Math.Truncate(percentage).ToString());
+        }
+
+        private void getmc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            lbl_status.Text = "Download Completed";
+            lbl_status.Enabled = true;
+            dev_tmr2.Stop();
+
+            Properties.Settings.Default.dev_download_res = "1";
+            Properties.Settings.Default.Save();
+            this.Close();
         }
 
         private void tmr_chck_Tick(object sender, EventArgs e)

@@ -109,6 +109,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dev_get_java";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.dev_get_java_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

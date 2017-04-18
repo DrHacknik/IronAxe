@@ -43,3 +43,4 @@ C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Mi
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable Minecraft Launcher.csproj.GenerateResource.Cache
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\IronAxe Minecraft Launcher.exe
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\IronAxe Minecraft Launcher.pdb
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable Minecraft Launcher.csprojResolveAssemblyReference.cache
