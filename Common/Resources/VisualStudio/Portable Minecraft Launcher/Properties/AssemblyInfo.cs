@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("C# Minecraft Launcher")]
+[assembly: AssemblyTitle("IronAxe Minecraft Launcher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Portable Minecraft Launcher")]
+[assembly: AssemblyProduct("IronAxe Minecraft Launcher")]
 [assembly: AssemblyCopyright("Copyright © Dr.Hacknik 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

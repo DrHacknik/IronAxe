@@ -133,7 +133,7 @@
             this.btn_settings.Size = new System.Drawing.Size(118, 44);
             this.btn_settings.TabIndex = 10;
             this.btn_settings.Text = "SETTINGS";
-            this.btn_tooltip.SetToolTip(this.btn_settings, "Download Resources again, if they haven\'t already been downloaded.");
+            this.btn_tooltip.SetToolTip(this.btn_settings, "Mange and change application settings.");
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 

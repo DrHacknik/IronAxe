@@ -29,3 +29,17 @@ C:\Users\Luke\Documents\GitHub\IronAxe-Minecraft-Launcher\Common\Resources\Visua
 C:\Users\Luke\Documents\GitHub\IronAxe-Minecraft-Launcher\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.Main.resources
 C:\Users\Luke\Documents\GitHub\IronAxe-Minecraft-Launcher\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.Properties.Resources.resources
 C:\Users\Luke\Documents\GitHub\IronAxe-Minecraft-Launcher\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable Minecraft Launcher.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Release\IronAxe Minecraft Launcher.exe.config
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Release\IronAxe Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x86\Release\IronAxe Minecraft Launcher.pdb
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_agreement.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_get_java.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_profile_create.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_profile_load.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_settings.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.dev_start.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.Main.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable_Minecraft_Launcher.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\Portable Minecraft Launcher.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\IronAxe Minecraft Launcher.exe
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x86\Release\IronAxe Minecraft Launcher.pdb
