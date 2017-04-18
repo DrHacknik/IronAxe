@@ -11,7 +11,7 @@ On top of that, it is built on the 32bit architecture. Meaning that it will be a
 
 
 * Run the program and make sure that it downloads the necessary resources.
-*After downloading, a Installer will show; this is the Java Portable Installer. Have it install within the directory "\bin\commonfiles"
+After downloading, a Installer will show; this is the Java Portable Installer. Make sure it installs within the directory "\bin\commonfiles\Java" or "\bin\commonfiles\Java64."
 * Restart the program.
 * Now, create a profile using the profile_create option.
 * Now, load said profile. You can choose to load it with portable Java, or not. It may ask you if you want to set it as the default profile to load.
