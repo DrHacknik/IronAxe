@@ -11,6 +11,7 @@ On top of that, it is built on the 32bit architecture. Meaning that it will be a
 
 * A new build will be released later today at 5:00PM EST 4/18/17.
 This build will correct some issues, and refine the interface. 
+* Also, the thread post on GBAtemp will be updated at the same time frame, with Instructions and more information. 
 
 ## Versions: 
 
