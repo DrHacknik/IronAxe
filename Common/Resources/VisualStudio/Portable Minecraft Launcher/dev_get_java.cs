@@ -44,11 +44,14 @@ namespace Portable_Minecraft_Launcher
             //Starts the download
             if (is64Bit == true)
             {
-                client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
-            }
-            else
-            {
-                client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                if (Properties.Settings.Default.dev_overide_arch == "1")
+                {
+                    client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                }
+                else
+                {
+                    client.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+                }
             }
 
             lbl_status.Text = "Download In Progress (JRE)";
@@ -102,7 +105,7 @@ namespace Portable_Minecraft_Launcher
             get_mc.DownloadFileCompleted += new AsyncCompletedEventHandler(getmc_DownloadFileCompleted);
 
             //Starts the download
-            get_mc.DownloadFileAsync(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Resources/Java_Launcher/minecraft.jar?raw=true"), cd + "\\bin\\minecraft.jar");
+            get_mc.DownloadFileAsync(new Uri("http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"), cd + "\\bin\\minecraft.jar");
         }
 
         private void getmc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -143,7 +146,7 @@ namespace Portable_Minecraft_Launcher
 
         private void lbl_can_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            Close();
         }
     }
 }

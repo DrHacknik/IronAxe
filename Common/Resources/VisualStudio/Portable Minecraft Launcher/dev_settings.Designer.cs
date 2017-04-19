@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dev_settings));
             this.btn_save = new System.Windows.Forms.Button();
             this.chck_def_prof_st = new System.Windows.Forms.CheckBox();
             this.lbl_def_prof_st = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.btn_tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.btn_reset_cache = new System.Windows.Forms.Button();
             this.chck_def_pof_st_java = new System.Windows.Forms.CheckBox();
+            this.chck_overide_bit = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btn_save
@@ -84,7 +86,7 @@
             // 
             // btn_tooltip
             // 
-            this.btn_tooltip.AutoPopDelay = 8000;
+            this.btn_tooltip.AutoPopDelay = 15000;
             this.btn_tooltip.InitialDelay = 300;
             this.btn_tooltip.IsBalloon = true;
             this.btn_tooltip.ReshowDelay = 100;
@@ -115,6 +117,17 @@
             this.chck_def_pof_st_java.Text = "Launch with Portable Java?";
             this.chck_def_pof_st_java.UseVisualStyleBackColor = true;
             // 
+            // chck_overide_bit
+            // 
+            this.chck_overide_bit.AutoSize = true;
+            this.chck_overide_bit.Location = new System.Drawing.Point(12, 117);
+            this.chck_overide_bit.Name = "chck_overide_bit";
+            this.chck_overide_bit.Size = new System.Drawing.Size(177, 17);
+            this.chck_overide_bit.TabIndex = 1;
+            this.chck_overide_bit.Text = "Overide architecture Detection?";
+            this.btn_tooltip.SetToolTip(this.chck_overide_bit, resources.GetString("chck_overide_bit.ToolTip"));
+            this.chck_overide_bit.UseVisualStyleBackColor = true;
+            // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +137,7 @@
             this.Controls.Add(this.chck_def_pof_st_java);
             this.Controls.Add(this.btn_reset_cache);
             this.Controls.Add(this.lbl_def_prof_st);
+            this.Controls.Add(this.chck_overide_bit);
             this.Controls.Add(this.chck_upd);
             this.Controls.Add(this.chck_def_prof_st);
             this.Controls.Add(this.btn_save);
@@ -148,5 +162,6 @@
         private System.Windows.Forms.ToolTip btn_tooltip;
         private System.Windows.Forms.Button btn_reset_cache;
         private System.Windows.Forms.CheckBox chck_def_pof_st_java;
+        private System.Windows.Forms.CheckBox chck_overide_bit;
     }
 }

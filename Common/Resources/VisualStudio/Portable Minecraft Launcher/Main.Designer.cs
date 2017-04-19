@@ -34,12 +34,16 @@
             this.btn_down = new System.Windows.Forms.Button();
             this.btn_profile_create = new System.Windows.Forms.Button();
             this.btn_profile_load = new System.Windows.Forms.Button();
-            this.lbl_ver = new System.Windows.Forms.Label();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_repair = new System.Windows.Forms.Button();
             this.pnl = new System.Windows.Forms.PictureBox();
+            this.btn_about = new System.Windows.Forms.Button();
+            this.pnl_logo = new System.Windows.Forms.Panel();
+            this.lbl_ver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pnl)).BeginInit();
+            this.pnl_logo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_reset
@@ -90,20 +94,6 @@
             this.btn_profile_load.UseVisualStyleBackColor = true;
             this.btn_profile_load.Click += new System.EventHandler(this.btn_profile_load_Click_1);
             // 
-            // lbl_ver
-            // 
-            this.lbl_ver.AutoSize = true;
-            this.lbl_ver.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ver.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbl_ver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ver.ForeColor = System.Drawing.Color.White;
-            this.lbl_ver.Location = new System.Drawing.Point(0, 173);
-            this.lbl_ver.Name = "lbl_ver";
-            this.lbl_ver.Size = new System.Drawing.Size(45, 13);
-            this.lbl_ver.TabIndex = 6;
-            this.lbl_ver.Text = "%VER%";
-            this.btn_tooltip.SetToolTip(this.lbl_ver, "This is the Current Version that you\'re using.");
-            // 
             // btn_update
             // 
             this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -112,7 +102,7 @@
             this.btn_update.Size = new System.Drawing.Size(118, 44);
             this.btn_update.TabIndex = 7;
             this.btn_update.Text = "UPDATE";
-            this.btn_tooltip.SetToolTip(this.btn_update, "Check for Application updates.");
+            this.btn_tooltip.SetToolTip(this.btn_update, "Check for Application updates, and Minecraft Launcher updates.");
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
@@ -128,7 +118,7 @@
             // btn_settings
             // 
             this.btn_settings.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_settings.Location = new System.Drawing.Point(166, 81);
+            this.btn_settings.Location = new System.Drawing.Point(313, 81);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(118, 44);
             this.btn_settings.TabIndex = 10;
@@ -137,27 +127,77 @@
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
+            // btn_repair
+            // 
+            this.btn_repair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_repair.Location = new System.Drawing.Point(166, 81);
+            this.btn_repair.Name = "btn_repair";
+            this.btn_repair.Size = new System.Drawing.Size(118, 44);
+            this.btn_repair.TabIndex = 12;
+            this.btn_repair.Text = "REPAIR JAVA";
+            this.btn_tooltip.SetToolTip(this.btn_repair, "Re-install Java/Java64 to the \\bin\\CommonFiles directory");
+            this.btn_repair.UseVisualStyleBackColor = true;
+            // 
             // pnl
             // 
             this.pnl.BackColor = System.Drawing.Color.Transparent;
-            this.pnl.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.IRONAXE_LOGO;
             this.pnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(604, 186);
+            this.pnl.Size = new System.Drawing.Size(604, 219);
             this.pnl.TabIndex = 8;
             this.pnl.TabStop = false;
+            // 
+            // btn_about
+            // 
+            this.btn_about.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_about.Location = new System.Drawing.Point(459, 81);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(118, 44);
+            this.btn_about.TabIndex = 14;
+            this.btn_about.Text = "ABOUT/CREDITS";
+            this.btn_tooltip.SetToolTip(this.btn_about, "Read about the program, and it\'s credits.");
+            this.btn_about.UseVisualStyleBackColor = true;
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
+            // 
+            // pnl_logo
+            // 
+            this.pnl_logo.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.IRONAXE_LOGO;
+            this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_logo.Controls.Add(this.lbl_ver);
+            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_logo.Location = new System.Drawing.Point(0, 131);
+            this.pnl_logo.Name = "pnl_logo";
+            this.pnl_logo.Size = new System.Drawing.Size(604, 88);
+            this.pnl_logo.TabIndex = 15;
+            // 
+            // lbl_ver
+            // 
+            this.lbl_ver.AutoSize = true;
+            this.lbl_ver.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ver.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_ver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ver.ForeColor = System.Drawing.Color.White;
+            this.lbl_ver.Location = new System.Drawing.Point(0, 75);
+            this.lbl_ver.Name = "lbl_ver";
+            this.lbl_ver.Size = new System.Drawing.Size(45, 13);
+            this.lbl_ver.TabIndex = 7;
+            this.lbl_ver.Text = "%VER%";
+            this.btn_tooltip.SetToolTip(this.lbl_ver, "This is the Current Version that you\'re using.");
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.PML_PNL;
-            this.ClientSize = new System.Drawing.Size(604, 186);
+            this.ClientSize = new System.Drawing.Size(604, 219);
+            this.Controls.Add(this.pnl_logo);
+            this.Controls.Add(this.btn_about);
+            this.Controls.Add(this.btn_repair);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.lbl_ver);
             this.Controls.Add(this.btn_profile_load);
             this.Controls.Add(this.btn_profile_create);
             this.Controls.Add(this.btn_down);
@@ -174,8 +214,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnl)).EndInit();
+            this.pnl_logo.ResumeLayout(false);
+            this.pnl_logo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -185,11 +226,14 @@
         private System.Windows.Forms.Button btn_down;
         private System.Windows.Forms.Button btn_profile_create;
         private System.Windows.Forms.Button btn_profile_load;
-        private System.Windows.Forms.Label lbl_ver;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.ToolTip btn_tooltip;
         private System.Windows.Forms.PictureBox pnl;
         private System.Windows.Forms.Button btn_settings;
+        private System.Windows.Forms.Button btn_repair;
+        private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Panel pnl_logo;
+        private System.Windows.Forms.Label lbl_ver;
     }
 }
 

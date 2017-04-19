@@ -94,5 +94,17 @@ namespace Portable_Minecraft_Launcher.Properties {
                 this["dev_def_prof_st_java"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_overide_arch {
+            get {
+                return ((string)(this["dev_overide_arch"]));
+            }
+            set {
+                this["dev_overide_arch"] = value;
+            }
+        }
     }
 }

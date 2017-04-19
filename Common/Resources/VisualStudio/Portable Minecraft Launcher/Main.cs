@@ -27,19 +27,20 @@ namespace Portable_Minecraft_Launcher
         {
             if (is64Bit == true)
             {
-                lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | x64bit mode";
-            }
-            else
-            {
-                lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD";
-                this.Text = "IronAxe Minecraft Launcher: Main ";
-                if (Properties.Settings.Default.dev_download_res == "")
+                if (Properties.Settings.Default.dev_overide_arch == "1")
                 {
-                    Form fm = new dev_get_java();
-                    fm.Show();
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | 32bit mode";
+                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                    if (Properties.Settings.Default.dev_download_res == "")
+                    {
+                        Form fm = new dev_get_java();
+                        fm.Show();
+                    }
                 }
                 else
                 {
+                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | 64bit mode";
                 }
             }
         }
@@ -51,9 +52,19 @@ namespace Portable_Minecraft_Launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.dev_agree = "0";
-            Properties.Settings.Default.Save();
-            Application.Restart();
+            DialogResult dr = MessageBox.Show("Are you sure that you want to Reset ALL OF THE SETTINGS TO THEIR DEFAULTS!?", "dev_", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            switch (dr)
+            {
+                case System.Windows.Forms.DialogResult.Yes:
+                    Properties.Settings.Default.dev_agree = "0";
+                    Properties.Settings.Default.Save();
+                    Application.Restart();
+                    break;
+
+                case System.Windows.Forms.DialogResult.No:
+
+                    break;
+            }
         }
 
         private void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -111,13 +122,19 @@ namespace Portable_Minecraft_Launcher
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry, but this Feature isn't yet implemented.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            // MessageBox.Show("Sorry, but this Feature isn't yet implemented.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            lbl_ver.Text = "Connecting to GitHub...";
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
             Form ds = new dev_settings();
             ds.Show();
+        }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This program is made in C#, and uses some Batch scripts. \r\n \r\nOrginal Scripts by MarioMasta64. \r\nThis program is licensed under the Open GNU GPL Source Agreement (v3). \r\n \r\nYou are using version: " + Application.ProductVersion, "dev_about", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

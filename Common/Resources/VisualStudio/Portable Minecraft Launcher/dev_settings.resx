@@ -120,4 +120,13 @@
   <metadata name="btn_tooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="chck_overide_bit.ToolTip" xml:space="preserve">
+    <value>Architecture detection is used to determine the arch of your Operating System. 
+This information is then used to determine whether you need a x64 or x32 version
+of Java. By enabling this, you will be forcing the program to use x32 mode. If you're
+running a x64 OS, this may be useful. Although, you will need to re-install Java Portable
+by clicking DOWNLOAD_RES. 
+
+If, you wish to use x64 mode; and you have a x64 OS, then just disable this option. </value>
+  </data>
 </root>
