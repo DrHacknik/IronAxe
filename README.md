@@ -33,6 +33,13 @@ This build will correct some issues, and refine the interface.
 
 ## Versions: 
 
+### 1.6: 
+* Fixed some minor issues
+* Added x64 support (As well as JRE8 x64) 
+* Improved the layout 
+* Working on some functions (IE: Repair Java) 
+* Working on an Updater for the Application and for updating MC 
+
 ### 1.5.2: 
 * Fixed some issues
 * Refined the interface
