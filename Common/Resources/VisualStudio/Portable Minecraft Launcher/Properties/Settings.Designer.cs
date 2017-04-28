@@ -106,5 +106,17 @@ namespace Portable_Minecraft_Launcher.Properties {
                 this["dev_overide_arch"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_auto_upd {
+            get {
+                return ((string)(this["dev_auto_upd"]));
+            }
+            set {
+                this["dev_auto_upd"] = value;
+            }
+        }
     }
 }

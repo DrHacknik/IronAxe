@@ -41,7 +41,7 @@
             // prg_prog
             // 
             this.prg_prog.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.prg_prog.Location = new System.Drawing.Point(0, 67);
+            this.prg_prog.Location = new System.Drawing.Point(0, 117);
             this.prg_prog.Name = "prg_prog";
             this.prg_prog.Size = new System.Drawing.Size(319, 10);
             this.prg_prog.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.lbl_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_start.Location = new System.Drawing.Point(0, 0);
             this.lbl_start.Name = "lbl_start";
-            this.lbl_start.Size = new System.Drawing.Size(319, 67);
+            this.lbl_start.Size = new System.Drawing.Size(319, 117);
             this.lbl_start.TabIndex = 1;
             this.lbl_start.Text = "Starting Minecraft";
             this.lbl_start.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,9 +62,9 @@
             this.lbl_start_tiny.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_start_tiny.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_start_tiny.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_start_tiny.Location = new System.Drawing.Point(0, 51);
+            this.lbl_start_tiny.Location = new System.Drawing.Point(0, 74);
             this.lbl_start_tiny.Name = "lbl_start_tiny";
-            this.lbl_start_tiny.Size = new System.Drawing.Size(319, 16);
+            this.lbl_start_tiny.Size = new System.Drawing.Size(319, 43);
             this.lbl_start_tiny.TabIndex = 2;
             this.lbl_start_tiny.Text = "When the Progressbar is filled. Press CTRL and Q to cancel.";
             this.lbl_start_tiny.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -72,7 +72,7 @@
             // tmr_int
             // 
             this.tmr_int.Enabled = true;
-            this.tmr_int.Interval = 45;
+            this.tmr_int.Interval = 35;
             this.tmr_int.Tick += new System.EventHandler(this.tmr_int_Tick);
             // 
             // contextMenuStrip1
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 77);
+            this.ClientSize = new System.Drawing.Size(319, 127);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.ControlBox = false;
             this.Controls.Add(this.lbl_start_tiny);

@@ -29,18 +29,196 @@ namespace Portable_Minecraft_Launcher
             {
                 if (Properties.Settings.Default.dev_overide_arch == "1")
                 {
-                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | 32bit mode";
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
                     this.Text = "IronAxe Minecraft Launcher: Main ";
                     if (Properties.Settings.Default.dev_download_res == "")
                     {
                         Form fm = new dev_get_java();
                         fm.Show();
                     }
+                    else
+                    {
+                        lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                        this.Text = "IronAxe Minecraft Launcher: Main ";
+                    }
                 }
                 else
                 {
                     this.Text = "IronAxe Minecraft Launcher: Main ";
-                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | DEBUG BUILD | 64bit mode";
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                }
+                if (File.Exists(cd + "\\upd_fin.exe"))
+                {
+                    File.Delete(cd + "\\upd_fin.exe");
+                }
+                if (File.Exists(cd + "\\Update_Info.ini"))
+                {
+                    File.Delete(cd + "\\Update_Info.ini");
+                }
+
+                if (File.Exists(cd + "\\upd_fin.exe"))
+                {
+                    File.Delete(cd + "\\upd_fin.exe");
+                }
+                if (File.Exists(cd + "\\Update_Info.ini"))
+                {
+                    File.Delete(cd + "\\Update_Info.ini");
+                }
+
+                try
+                {
+                    if (Properties.Settings.Default.dev_auto_upd == "1")
+                    {
+                        if (is64Bit == true)
+                        {
+                            //Read latest update and convert to string
+                            WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                            WebResponse response = request.GetResponse();
+                            Stream dataStream = response.GetResponseStream();
+                            StreamReader upd_rd = new StreamReader(dataStream);
+                            string upd_get = upd_rd.ReadToEnd();
+
+                            //Get and read latest update info, then grab it
+                            //But first delete old files, and continue.
+                            WebClient get_info = new WebClient();
+                            string cd = Application.StartupPath;
+
+                            lbl_ver.Text = "Downloading Update info...";
+                            this.Refresh();
+                            get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                            WebClient upd_dwld = new WebClient();
+                            using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                            {
+                                using (StreamReader reader = new StreamReader(upd))
+                                {
+                                    string rd_upd = null;
+
+                                    rd_upd = reader.ReadToEnd();
+
+                                    if (rd_upd == Application.ProductVersion)
+                                    {
+                                        if (is64Bit == true)
+                                        {
+                                            if (Properties.Settings.Default.dev_overide_arch == "1")
+                                            {
+                                                lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                                                this.Text = "IronAxe Minecraft Launcher: Main ";
+                                            }
+                                            else
+                                            {
+                                                this.Text = "IronAxe Minecraft Launcher: Main ";
+                                                lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                                            }
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            DialogResult dr = MessageBox.Show("There's an Update available" + " (" + upd_get + ")" + "\r\nDo you wish to update?", "IronAxe: Update", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                            switch (dr)
+                                            {
+                                                case System.Windows.Forms.DialogResult.Yes:
+                                                    lbl_ver.Text = "Downloading Update...";
+                                                    this.Refresh();
+                                                    upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_64.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                                    WebClient get_fin = new WebClient();
+                                                    lbl_ver.Text = "Preparing update...";
+                                                    this.Refresh();
+                                                    get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                                    Process.Start(cd + "\\upd_fin.exe");
+
+                                                    Application.Exit();
+                                                    break;
+
+                                                case System.Windows.Forms.DialogResult.No:
+
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (Properties.Settings.Default.dev_auto_upd == "1")
+                            {
+                                //Read latest update and convert to string
+                                WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                                WebResponse response = request.GetResponse();
+                                Stream dataStream = response.GetResponseStream();
+                                StreamReader upd_rd = new StreamReader(dataStream);
+                                string upd_get = upd_rd.ReadToEnd();
+
+                                //Get and read latest update info, then grab it
+                                //But first delete old files, and continue.
+                                WebClient get_info = new WebClient();
+                                string cd = Application.StartupPath;
+
+                                lbl_ver.Text = "Downloading Update info...";
+                                this.Refresh();
+                                get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                                WebClient upd_dwld = new WebClient();
+                                using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                                {
+                                    using (StreamReader reader = new StreamReader(upd))
+                                    {
+                                        string rd_upd = null;
+
+                                        rd_upd = reader.ReadToEnd();
+
+                                        if (rd_upd == Application.ProductVersion)
+                                        {
+                                            if (is64Bit == true)
+                                            {
+                                                if (Properties.Settings.Default.dev_overide_arch == "1")
+                                                {
+                                                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                                                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                                                }
+                                                else
+                                                {
+                                                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                                                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                                                }
+                                                return;
+                                            }
+                                            else
+                                            {
+                                                DialogResult dr = MessageBox.Show("There's an Update available" + " (" + upd_get + ")" + "\r\nDo you wish to update?", "IronAxe: Update", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                                switch (dr)
+                                                {
+                                                    case System.Windows.Forms.DialogResult.Yes:
+                                                        lbl_ver.Text = "Downloading Update...";
+                                                        this.Refresh();
+                                                        upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_32.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                                        WebClient get_fin = new WebClient();
+                                                        lbl_ver.Text = "Preparing update...";
+                                                        this.Refresh();
+                                                        get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                                        Process.Start(cd + "\\upd_fin.exe");
+
+                                                        Application.Exit();
+                                                        break;
+
+                                                    case System.Windows.Forms.DialogResult.No:
+
+                                                        break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    lbl_ver.Text = "Update error: Unable to connect.";
+                    this.Text = "IronAxe Minecraft Launcher: Main --UPDATE_ERROR ";
+                    MessageBox.Show("An error has occurred when attempting to update. \r\nPlease make sure you have an internet connection.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                    this.Text = "IronAxe Minecraft Launcher: Main ";
                 }
             }
         }
@@ -122,8 +300,204 @@ namespace Portable_Minecraft_Launcher
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show("Sorry, but this Feature isn't yet implemented.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             lbl_ver.Text = "Connecting to GitHub...";
+
+            if (File.Exists(cd + "\\upd_fin.exe"))
+            {
+                File.Delete(cd + "\\upd_fin.exe");
+            }
+            if (File.Exists(cd + "\\Update_Info.ini"))
+            {
+                File.Delete(cd + "\\Update_Info.ini");
+            }
+            try
+            {
+                if (is64Bit == true)
+                {
+                    //Read latest update and convert to string
+                    WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                    WebResponse response = request.GetResponse();
+                    Stream dataStream = response.GetResponseStream();
+                    StreamReader upd_rd = new StreamReader(dataStream);
+                    string upd_get = upd_rd.ReadToEnd();
+
+                    //Get and read latest update info, then grab it
+                    //But first delete old files, and continue.
+                    WebClient get_info = new WebClient();
+                    string cd = Application.StartupPath;
+
+                    lbl_ver.Text = "Downloading Update info...";
+                    this.Refresh();
+                    get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                    WebClient upd_dwld = new WebClient();
+
+                    upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
+                    upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
+
+                    using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                    {
+                        using (StreamReader reader = new StreamReader(upd))
+                        {
+                            string rd_upd = null;
+
+                            rd_upd = reader.ReadToEnd();
+
+                            if (rd_upd == Application.ProductVersion)
+                            {
+                                if (is64Bit == true)
+                                {
+                                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                                    {
+                                        lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                                        this.Text = "IronAxe Minecraft Launcher: Main ";
+                                    }
+                                    else
+                                    {
+                                        this.Text = "IronAxe Minecraft Launcher: Main ";
+                                        lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                                    }
+                                    return;
+                                }
+                                else
+                                {
+                                    DialogResult dr = MessageBox.Show("There's an Update available" + " (" + upd_get + ")" + "\r\nDo you wish to update?", "IronAxe: Update", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                    switch (dr)
+                                    {
+                                        case System.Windows.Forms.DialogResult.Yes:
+                                            lbl_ver.Text = "Downloading Update...";
+                                            this.Refresh();
+                                            upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_64.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                            WebClient get_fin = new WebClient();
+                                            lbl_ver.Text = "Preparing update...";
+                                            this.Refresh();
+                                            get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                            Process.Start(cd + "\\upd_fin.exe");
+
+                                            Application.Exit();
+                                            break;
+
+                                        case System.Windows.Forms.DialogResult.No:
+
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (Properties.Settings.Default.dev_auto_upd == "1")
+                    {
+                        //Read latest update and convert to string
+                        WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                        WebResponse response = request.GetResponse();
+                        Stream dataStream = response.GetResponseStream();
+                        StreamReader upd_rd = new StreamReader(dataStream);
+                        string upd_get = upd_rd.ReadToEnd();
+
+                        //Get and read latest update info, then grab it
+                        //But first delete old files, and continue.
+                        WebClient get_info = new WebClient();
+                        string cd = Application.StartupPath;
+
+                        lbl_ver.Text = "Downloading Update info...";
+                        this.Refresh();
+                        get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                        WebClient upd_dwld = new WebClient();
+
+                        upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
+                        upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
+
+                        using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                        {
+                            using (StreamReader reader = new StreamReader(upd))
+                            {
+                                string rd_upd = null;
+
+                                rd_upd = reader.ReadToEnd();
+
+                                if (rd_upd == Application.ProductVersion)
+                                {
+                                    if (is64Bit == true)
+                                    {
+                                        if (Properties.Settings.Default.dev_overide_arch == "1")
+                                        {
+                                            lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                                            this.Text = "IronAxe Minecraft Launcher: Main ";
+                                        }
+                                        else
+                                        {
+                                            this.Text = "IronAxe Minecraft Launcher: Main ";
+                                            lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                                        }
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        DialogResult dr = MessageBox.Show("There's an Update available" + " (" + upd_get + ")" + "\r\nDo you wish to update?", "IronAxe: Update", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                        switch (dr)
+                                        {
+                                            case System.Windows.Forms.DialogResult.Yes:
+                                                lbl_ver.Text = "Downloading Update...";
+                                                this.Refresh();
+                                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_32.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                                WebClient get_fin = new WebClient();
+                                                lbl_ver.Text = "Preparing update...";
+                                                this.Refresh();
+                                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                                Process.Start(cd + "\\upd_fin.exe");
+
+                                                Application.Exit();
+                                                break;
+
+                                            case System.Windows.Forms.DialogResult.No:
+
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                lbl_ver.Text = "Update error: Unable to connect.";
+                this.Text = "IronAxe Minecraft Launcher: Main --UPDATE_ERROR ";
+                MessageBox.Show("An error has occurred when attempting to update. \r\nPlease make sure you have an internet connection.", "dev_", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                this.Text = "IronAxe Minecraft Launcher: Main ";
+            }
+        }
+
+        private void upd_dwld_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+
+            lbl_ver.Text = "Downloading update: " + int.Parse(Math.Truncate(percentage).ToString());
+        }
+
+        private void upd_dwld_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            lbl_ver.Text = "Download Completed";
+        }
+
+        private void get_fin_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+
+            lbl_ver.Text = "Preparing update: " + int.Parse(Math.Truncate(percentage).ToString());
+        }
+
+        private void get_fin_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            lbl_ver.Text = "Preparatation Completed";
         }
 
         private void btn_settings_Click(object sender, EventArgs e)

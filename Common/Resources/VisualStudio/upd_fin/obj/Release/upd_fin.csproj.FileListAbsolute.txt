@@ -1,0 +1,2 @@
+C:\Users\Luke\Documents\GitHub\SimplyU\Common\Resources\Projects\upd_fin\bin\Release\upd_fin.exe.config
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\bin\Release\upd_fin.exe.config

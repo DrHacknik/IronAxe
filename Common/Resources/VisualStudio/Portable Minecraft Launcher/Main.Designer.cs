@@ -38,10 +38,10 @@
             this.btn_tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_repair = new System.Windows.Forms.Button();
-            this.pnl = new System.Windows.Forms.PictureBox();
             this.btn_about = new System.Windows.Forms.Button();
-            this.pnl_logo = new System.Windows.Forms.Panel();
             this.lbl_ver = new System.Windows.Forms.Label();
+            this.pnl = new System.Windows.Forms.PictureBox();
+            this.pnl_logo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pnl)).BeginInit();
             this.pnl_logo.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(118, 44);
             this.btn_reset.TabIndex = 0;
-            this.btn_reset.Text = "RESET";
+            this.btn_reset.Text = "Reset Settings";
             this.btn_tooltip.SetToolTip(this.btn_reset, "This will Reset all the App\'s settings to their defaults. ");
             this.btn_reset.UseVisualStyleBackColor = true;
             this.btn_reset.Click += new System.EventHandler(this.button1_Click);
@@ -65,7 +65,7 @@
             this.btn_down.Name = "btn_down";
             this.btn_down.Size = new System.Drawing.Size(118, 44);
             this.btn_down.TabIndex = 1;
-            this.btn_down.Text = "DOWNLOAD_RESOURCES";
+            this.btn_down.Text = "Download Resources";
             this.btn_tooltip.SetToolTip(this.btn_down, "Download Resources again, if they haven\'t already been downloaded.");
             this.btn_down.UseVisualStyleBackColor = true;
             this.btn_down.Click += new System.EventHandler(this.btn_down_Click);
@@ -77,7 +77,7 @@
             this.btn_profile_create.Name = "btn_profile_create";
             this.btn_profile_create.Size = new System.Drawing.Size(118, 44);
             this.btn_profile_create.TabIndex = 2;
-            this.btn_profile_create.Text = "PROFILE_CREATE";
+            this.btn_profile_create.Text = "Create Profile ";
             this.btn_tooltip.SetToolTip(this.btn_profile_create, "Manage and Create Profiles.");
             this.btn_profile_create.UseVisualStyleBackColor = true;
             this.btn_profile_create.Click += new System.EventHandler(this.btn_profile_create_Click);
@@ -89,7 +89,7 @@
             this.btn_profile_load.Name = "btn_profile_load";
             this.btn_profile_load.Size = new System.Drawing.Size(118, 44);
             this.btn_profile_load.TabIndex = 3;
-            this.btn_profile_load.Text = "PROFILE_LOAD";
+            this.btn_profile_load.Text = "Load Profile";
             this.btn_tooltip.SetToolTip(this.btn_profile_load, "Load an Profile. ");
             this.btn_profile_load.UseVisualStyleBackColor = true;
             this.btn_profile_load.Click += new System.EventHandler(this.btn_profile_load_Click_1);
@@ -101,7 +101,7 @@
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(118, 44);
             this.btn_update.TabIndex = 7;
-            this.btn_update.Text = "UPDATE";
+            this.btn_update.Text = "Check for Updates";
             this.btn_tooltip.SetToolTip(this.btn_update, "Check for Application updates, and Minecraft Launcher updates.");
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
@@ -122,7 +122,7 @@
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(118, 44);
             this.btn_settings.TabIndex = 10;
-            this.btn_settings.Text = "SETTINGS";
+            this.btn_settings.Text = "Settings";
             this.btn_tooltip.SetToolTip(this.btn_settings, "Mange and change application settings.");
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
@@ -134,20 +134,9 @@
             this.btn_repair.Name = "btn_repair";
             this.btn_repair.Size = new System.Drawing.Size(118, 44);
             this.btn_repair.TabIndex = 12;
-            this.btn_repair.Text = "REPAIR JAVA";
+            this.btn_repair.Text = "Repair Java";
             this.btn_tooltip.SetToolTip(this.btn_repair, "Re-install Java/Java64 to the \\bin\\CommonFiles directory");
             this.btn_repair.UseVisualStyleBackColor = true;
-            // 
-            // pnl
-            // 
-            this.pnl.BackColor = System.Drawing.Color.Transparent;
-            this.pnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl.Location = new System.Drawing.Point(0, 0);
-            this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(604, 219);
-            this.pnl.TabIndex = 8;
-            this.pnl.TabStop = false;
             // 
             // btn_about
             // 
@@ -156,22 +145,10 @@
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(118, 44);
             this.btn_about.TabIndex = 14;
-            this.btn_about.Text = "ABOUT/CREDITS";
+            this.btn_about.Text = "About/Credits";
             this.btn_tooltip.SetToolTip(this.btn_about, "Read about the program, and it\'s credits.");
             this.btn_about.UseVisualStyleBackColor = true;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
-            // 
-            // pnl_logo
-            // 
-            this.pnl_logo.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.IRONAXE_LOGO;
-            this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnl_logo.Controls.Add(this.lbl_ver);
-            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_logo.Location = new System.Drawing.Point(0, 131);
-            this.pnl_logo.Name = "pnl_logo";
-            this.pnl_logo.Size = new System.Drawing.Size(604, 88);
-            this.pnl_logo.TabIndex = 15;
             // 
             // lbl_ver
             // 
@@ -186,6 +163,29 @@
             this.lbl_ver.TabIndex = 7;
             this.lbl_ver.Text = "%VER%";
             this.btn_tooltip.SetToolTip(this.lbl_ver, "This is the Current Version that you\'re using.");
+            // 
+            // pnl
+            // 
+            this.pnl.BackColor = System.Drawing.Color.Transparent;
+            this.pnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl.Location = new System.Drawing.Point(0, 0);
+            this.pnl.Name = "pnl";
+            this.pnl.Size = new System.Drawing.Size(604, 219);
+            this.pnl.TabIndex = 8;
+            this.pnl.TabStop = false;
+            // 
+            // pnl_logo
+            // 
+            this.pnl_logo.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.IRONAXE_LOGO;
+            this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_logo.Controls.Add(this.lbl_ver);
+            this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_logo.Location = new System.Drawing.Point(0, 131);
+            this.pnl_logo.Name = "pnl_logo";
+            this.pnl_logo.Size = new System.Drawing.Size(604, 88);
+            this.pnl_logo.TabIndex = 15;
             // 
             // Main
             // 

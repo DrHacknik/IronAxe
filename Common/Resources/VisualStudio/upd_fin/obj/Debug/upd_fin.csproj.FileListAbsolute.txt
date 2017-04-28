@@ -1,0 +1,11 @@
+C:\Users\Luke\Documents\GitHub\SimplyU\Common\Resources\Projects\upd_fin\bin\Debug\upd_fin.exe.config
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\bin\Debug\upd_fin.exe.config
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\bin\Debug\upd_fin.exe
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\bin\Debug\upd_fin.pdb
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\bin\Debug\MaterialSkin.dll
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.csprojResolveAssemblyReference.cache
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.Form1.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.Properties.Resources.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.csproj.GenerateResource.Cache
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.exe
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\upd_fin\obj\Debug\upd_fin.pdb

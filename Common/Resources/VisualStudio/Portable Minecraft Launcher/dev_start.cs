@@ -58,6 +58,7 @@ namespace Portable_Minecraft_Launcher
                 {
                     Directory.Move(cd + "\\bin\\CommonFiles\\Java64", cd + "\\bin\\CommonFiles\\Java");
                 }
+                lbl_start_tiny.Text = "When the Progressbar is filled. Press CTRL and Q to cancel. \r\nStarting profile: " + Properties.Settings.Default.dev_def_prof + "\r\nPortable Java = " + Properties.Settings.Default.dev_def_prof_st_java;
             }
         }
     }

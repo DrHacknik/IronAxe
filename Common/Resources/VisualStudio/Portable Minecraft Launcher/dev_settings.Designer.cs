@@ -32,18 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dev_settings));
             this.btn_save = new System.Windows.Forms.Button();
             this.chck_def_prof_st = new System.Windows.Forms.CheckBox();
-            this.lbl_def_prof_st = new System.Windows.Forms.Label();
             this.chck_upd = new System.Windows.Forms.CheckBox();
             this.btn_tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.btn_reset_cache = new System.Windows.Forms.Button();
-            this.chck_def_pof_st_java = new System.Windows.Forms.CheckBox();
             this.chck_overide_bit = new System.Windows.Forms.CheckBox();
+            this.chck_def_pof_st_java = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btn_save
             // 
             this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_save.Location = new System.Drawing.Point(117, 184);
+            this.btn_save.Location = new System.Drawing.Point(117, 130);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(92, 23);
             this.btn_save.TabIndex = 0;
@@ -60,24 +59,15 @@
             this.chck_def_prof_st.Size = new System.Drawing.Size(178, 17);
             this.chck_def_prof_st.TabIndex = 1;
             this.chck_def_prof_st.Text = "Start Default Profile upon Start? \r\n";
+            this.btn_tooltip.SetToolTip(this.chck_def_prof_st, "This will start the default profile set\r\nwhen launching. Although, you can press\r" +
+        "\nCTRL+Q to cancel. \r\n");
             this.chck_def_prof_st.UseVisualStyleBackColor = true;
             this.chck_def_prof_st.CheckedChanged += new System.EventHandler(this.chck_def_prof_st_CheckedChanged);
-            // 
-            // lbl_def_prof_st
-            // 
-            this.lbl_def_prof_st.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_def_prof_st.Location = new System.Drawing.Point(9, 55);
-            this.lbl_def_prof_st.Name = "lbl_def_prof_st";
-            this.lbl_def_prof_st.Size = new System.Drawing.Size(190, 59);
-            this.lbl_def_prof_st.TabIndex = 2;
-            this.lbl_def_prof_st.Text = "This will start the default profile set\r\nwhen launching. Although, you can press\r" +
-    "\nCTRL+Q to cancel. ";
             // 
             // chck_upd
             // 
             this.chck_upd.AutoSize = true;
-            this.chck_upd.Enabled = false;
-            this.chck_upd.Location = new System.Drawing.Point(12, 145);
+            this.chck_upd.Location = new System.Drawing.Point(12, 98);
             this.chck_upd.Name = "chck_upd";
             this.chck_upd.Size = new System.Drawing.Size(184, 17);
             this.chck_upd.TabIndex = 1;
@@ -96,7 +86,7 @@
             // btn_reset_cache
             // 
             this.btn_reset_cache.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_reset_cache.Location = new System.Drawing.Point(2, 184);
+            this.btn_reset_cache.Location = new System.Drawing.Point(2, 130);
             this.btn_reset_cache.Name = "btn_reset_cache";
             this.btn_reset_cache.Size = new System.Drawing.Size(109, 23);
             this.btn_reset_cache.TabIndex = 3;
@@ -105,6 +95,17 @@
         "! ");
             this.btn_reset_cache.UseVisualStyleBackColor = true;
             this.btn_reset_cache.Click += new System.EventHandler(this.btn_reset_cache_Click);
+            // 
+            // chck_overide_bit
+            // 
+            this.chck_overide_bit.AutoSize = true;
+            this.chck_overide_bit.Location = new System.Drawing.Point(12, 70);
+            this.chck_overide_bit.Name = "chck_overide_bit";
+            this.chck_overide_bit.Size = new System.Drawing.Size(177, 17);
+            this.chck_overide_bit.TabIndex = 1;
+            this.chck_overide_bit.Text = "Overide architecture Detection?";
+            this.btn_tooltip.SetToolTip(this.chck_overide_bit, resources.GetString("chck_overide_bit.ToolTip"));
+            this.chck_overide_bit.UseVisualStyleBackColor = true;
             // 
             // chck_def_pof_st_java
             // 
@@ -117,26 +118,14 @@
             this.chck_def_pof_st_java.Text = "Launch with Portable Java?";
             this.chck_def_pof_st_java.UseVisualStyleBackColor = true;
             // 
-            // chck_overide_bit
-            // 
-            this.chck_overide_bit.AutoSize = true;
-            this.chck_overide_bit.Location = new System.Drawing.Point(12, 117);
-            this.chck_overide_bit.Name = "chck_overide_bit";
-            this.chck_overide_bit.Size = new System.Drawing.Size(177, 17);
-            this.chck_overide_bit.TabIndex = 1;
-            this.chck_overide_bit.Text = "Overide architecture Detection?";
-            this.btn_tooltip.SetToolTip(this.chck_overide_bit, resources.GetString("chck_overide_bit.ToolTip"));
-            this.chck_overide_bit.UseVisualStyleBackColor = true;
-            // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 208);
+            this.ClientSize = new System.Drawing.Size(211, 154);
             this.ControlBox = false;
             this.Controls.Add(this.chck_def_pof_st_java);
             this.Controls.Add(this.btn_reset_cache);
-            this.Controls.Add(this.lbl_def_prof_st);
             this.Controls.Add(this.chck_overide_bit);
             this.Controls.Add(this.chck_upd);
             this.Controls.Add(this.chck_def_prof_st);
@@ -157,7 +146,6 @@
 
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.CheckBox chck_def_prof_st;
-        private System.Windows.Forms.Label lbl_def_prof_st;
         private System.Windows.Forms.CheckBox chck_upd;
         private System.Windows.Forms.ToolTip btn_tooltip;
         private System.Windows.Forms.Button btn_reset_cache;

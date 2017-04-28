@@ -19,6 +19,14 @@ namespace Portable_Minecraft_Launcher
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (chck_upd.Checked == true)
+            {
+                Properties.Settings.Default.dev_auto_upd = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_auto_upd = "0";
+            }
             if (chck_overide_bit.Checked == true)
             {
                 Properties.Settings.Default.dev_overide_arch = "1";
@@ -71,6 +79,10 @@ namespace Portable_Minecraft_Launcher
 
         private void dev_settings_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.dev_auto_upd == "1")
+            {
+                chck_upd.Checked = true;
+            }
             if (Properties.Settings.Default.dev_overide_arch == "1")
             {
                 chck_overide_bit.Checked = true;
