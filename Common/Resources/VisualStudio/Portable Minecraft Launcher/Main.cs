@@ -315,7 +315,7 @@ namespace Portable_Minecraft_Launcher
                 if (is64Bit == true)
                 {
                     //Read latest update and convert to string
-                    WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                    WebRequest request = WebRequest.Create("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini");
                     WebResponse response = request.GetResponse();
                     Stream dataStream = response.GetResponseStream();
                     StreamReader upd_rd = new StreamReader(dataStream);
@@ -328,13 +328,13 @@ namespace Portable_Minecraft_Launcher
 
                     lbl_ver.Text = "Downloading Update info...";
                     this.Refresh();
-                    get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                    get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
                     WebClient upd_dwld = new WebClient();
 
                     upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                     upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                    using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                    using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
                     {
                         using (StreamReader reader = new StreamReader(upd))
                         {
@@ -366,11 +366,11 @@ namespace Portable_Minecraft_Launcher
                                         case System.Windows.Forms.DialogResult.Yes:
                                             lbl_ver.Text = "Downloading Update...";
                                             this.Refresh();
-                                            upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_64.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                            upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Latest_32.exe"), cd + "\\IronAxe Minecraft Launcher_new.exe");
                                             WebClient get_fin = new WebClient();
                                             lbl_ver.Text = "Preparing update...";
                                             this.Refresh();
-                                            get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                            get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
                                             Process.Start(cd + "\\upd_fin.exe");
 
                                             Application.Exit();
@@ -390,7 +390,7 @@ namespace Portable_Minecraft_Launcher
                     if (Properties.Settings.Default.dev_auto_upd == "1")
                     {
                         //Read latest update and convert to string
-                        WebRequest request = WebRequest.Create("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates//Update_Info.ini?raw=true");
+                        WebRequest request = WebRequest.Create("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini");
                         WebResponse response = request.GetResponse();
                         Stream dataStream = response.GetResponseStream();
                         StreamReader upd_rd = new StreamReader(dataStream);
@@ -403,13 +403,13 @@ namespace Portable_Minecraft_Launcher
 
                         lbl_ver.Text = "Downloading Update info...";
                         this.Refresh();
-                        get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+                        get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
                         WebClient upd_dwld = new WebClient();
 
                         upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                         upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                        using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                        using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
                         {
                             using (StreamReader reader = new StreamReader(upd))
                             {
@@ -441,11 +441,11 @@ namespace Portable_Minecraft_Launcher
                                             case System.Windows.Forms.DialogResult.Yes:
                                                 lbl_ver.Text = "Downloading Update...";
                                                 this.Refresh();
-                                                upd_dwld.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/Latest/Latest_32.exe?raw=true"), cd + "\\IronAxe Minecraft Launcher_new.exe");
+                                                upd_dwld.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Latest_32.exe"), cd + "\\IronAxe Minecraft Launcher_new.exe");
                                                 WebClient get_fin = new WebClient();
                                                 lbl_ver.Text = "Preparing update...";
                                                 this.Refresh();
-                                                get_fin.DownloadFile(new Uri("https://github.com/zoltx23/IronAxe/blob/master/Common/Updates/upd_fin.exe?raw=true"), cd + "\\upd_fin.exe");
+                                                get_fin.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/upd_fin.exe"), cd + "\\upd_fin.exe");
                                                 Process.Start(cd + "\\upd_fin.exe");
 
                                                 Application.Exit();
