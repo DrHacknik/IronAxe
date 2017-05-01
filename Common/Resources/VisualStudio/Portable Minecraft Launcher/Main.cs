@@ -49,6 +49,31 @@ namespace Portable_Minecraft_Launcher
                     this.Text = "IronAxe Minecraft Launcher: Main ";
                     lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
                 }
+
+                if (File.Exists(cd + "\\jPortable_8_Update_121.paf.exe"))
+                {
+                    if (File.Exists(cd + "\\bin\\JRE_32.exe"))
+                    {
+                        File.Delete(cd + "\\bin\\JRE_32.exe");
+                        File.Move(cd + "\\jPortable_8_Update_121.paf.exe", cd + "\\bin\\JRE_32.exe");
+                    }
+                    else
+                    {
+                        File.Move(cd + "\\jPortable_8_Update_121.paf.exe", cd + "\\bin\\JRE_32.exe");
+                    }
+                }
+                if (File.Exists(cd + "\\jPortable64_8_Update_121.paf.exe"))
+                {
+                    if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                    {
+                        File.Delete(cd + "\\bin\\JRE_64.exe");
+                        File.Move(cd + "\\jPortable64_8_Update_121.paf.exe", cd + "\\bin\\JRE_64.exe");
+                    }
+                    else
+                    {
+                        File.Move(cd + "\\jPortable64_8_Update_121.paf.exe", cd + "\\bin\\JRE_64.exe");
+                    }
+                }
                 if (File.Exists(cd + "\\upd_fin.exe"))
                 {
                     File.Delete(cd + "\\upd_fin.exe");
@@ -623,35 +648,22 @@ namespace Portable_Minecraft_Launcher
 
             if (is64Bit == true)
             {
-                if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                if (Properties.Settings.Default.dev_overide_arch == "1")
                 {
-                    Process.Start(cd + "\\bin\\JRE_64.exe");
-                }
-                else
-                {
-                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                    if (File.Exists(cd + "\\bin\\JRE_32.exe"))
                     {
-                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                        Process.Start(cd + "\\bin\\JRE_32.exe");
                     }
                     else
                     {
-                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
                     }
-                }
-
-                lbl_ver.Text = "Download In Progress (JRE)";
-            }
-            else
-            {
-                if (File.Exists(cd + "\\bin\\JRE_32.exe"))
-                {
-                    Process.Start(cd + "\\bin\\JRE_32.exe");
                 }
                 else
                 {
-                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                    if (File.Exists(cd + "\\bin\\JRE_64.exe"))
                     {
-                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                        Process.Start(cd + "\\bin\\JRE_64.exe");
                     }
                     else
                     {
@@ -667,7 +679,7 @@ namespace Portable_Minecraft_Launcher
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
 
-            lbl_ver.Text = "Downloading JRE: " + int.Parse(Math.Truncate(percentage).ToString() + "%");
+            lbl_ver.Text = "Downloading JRE: " + int.Parse(Math.Truncate(percentage).ToString());
         }
 
         private void get_jre_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
