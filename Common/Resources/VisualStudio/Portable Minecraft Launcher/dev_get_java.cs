@@ -30,11 +30,27 @@ namespace Portable_Minecraft_Launcher
         {
             if (File.Exists(cd + "\\jPortable_8_Update_121.paf.exe"))
             {
-                File.Delete(cd + "\\jPortable_8_Update_121.paf.exe");
+                if (File.Exists(cd + "\\bin\\JRE_32.exe"))
+                {
+                    File.Delete(cd + "\\bin\\JRE_32.exe");
+                    File.Move(cd + "\\jPortable_8_Update_121.paf.exe", cd + "\\bin\\JRE_32.exe");
+                }
+                else
+                {
+                    File.Move(cd + "\\jPortable_8_Update_121.paf.exe", cd + "\\bin\\JRE_32.exe");
+                }
             }
             if (File.Exists(cd + "\\jPortable64_8_Update_121.paf.exe"))
             {
-                File.Delete(cd + "\\jPortable64_8_Update_121.paf.exe");
+                if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                {
+                    File.Delete(cd + "\\bin\\JRE_64.exe");
+                    File.Move(cd + "\\jPortable64_8_Update_121.paf.exe", cd + "\\bin\\JRE_64.exe");
+                }
+                else
+                {
+                    File.Move(cd + "\\jPortable64_8_Update_121.paf.exe", cd + "\\bin\\JRE_64.exe");
+                }
             }
             //Prepare to Download Java
             WebClient client = new WebClient();

@@ -17,6 +17,8 @@ namespace Portable_Minecraft_Launcher
     {
         private bool is64Bit = System.Environment.Is64BitOperatingSystem;
         private string cd = Application.StartupPath;
+        private WebClient jv;
+        private Stopwatch sw = new Stopwatch();
 
         public Main()
         {
@@ -85,9 +87,9 @@ namespace Portable_Minecraft_Launcher
 
                             lbl_ver.Text = "Downloading Update info...";
                             this.Refresh();
-                            get_info.DownloadFile(new Uri("https://github.com/zoltx23/SimpliiU/IronAxe/master/Common/Updates/Latest/Update_Info.ini?raw=true"), cd + "\\Update_Info.ini");
+
                             WebClient upd_dwld = new WebClient();
-                            using (Stream upd = File.Open(cd + "\\Update_info.txt", FileMode.Open))
+                            using (Stream upd = get_info.OpenRead("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"))
                             {
                                 using (StreamReader reader = new StreamReader(upd))
                                 {
@@ -150,19 +152,18 @@ namespace Portable_Minecraft_Launcher
                                 string upd_get = upd_rd.ReadToEnd();
 
                                 //Get and read latest update info, then grab it
-                                //But first delete old files, and continue.
                                 WebClient get_info = new WebClient();
                                 string cd = Application.StartupPath;
 
                                 lbl_ver.Text = "Downloading Update info...";
                                 this.Refresh();
-                                get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
+
                                 WebClient upd_dwld = new WebClient();
 
                                 upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                                 upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                                using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
+                                using (Stream upd = get_info.OpenRead("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"))
                                 {
                                     using (StreamReader reader = new StreamReader(upd))
                                     {
@@ -231,13 +232,13 @@ namespace Portable_Minecraft_Launcher
 
                                     lbl_ver.Text = "Downloading Update info...";
                                     this.Refresh();
-                                    get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
+
                                     WebClient upd_dwld = new WebClient();
 
                                     upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                                     upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                                    using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
+                                    using (Stream upd = get_info.OpenRead("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"))
                                     {
                                         using (StreamReader reader = new StreamReader(upd))
                                         {
@@ -395,26 +396,26 @@ namespace Portable_Minecraft_Launcher
                 if (is64Bit == true)
                 {
                     //Read latest update and convert to string
-                    WebRequest request = WebRequest.Create("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini");
-                    WebResponse response = request.GetResponse();
+                    WebRequest get_upd = WebRequest.Create("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini");
+                    WebResponse response = get_upd.GetResponse();
                     Stream dataStream = response.GetResponseStream();
                     StreamReader upd_rd = new StreamReader(dataStream);
                     string upd_get = upd_rd.ReadToEnd();
 
                     //Get and read latest update info, then grab it
-                    //But first delete old files, and continue.
                     WebClient get_info = new WebClient();
+
                     string cd = Application.StartupPath;
 
                     lbl_ver.Text = "Downloading Update info...";
                     this.Refresh();
-                    get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
+
                     WebClient upd_dwld = new WebClient();
 
                     upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                     upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                    using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
+                    using (Stream upd = get_info.OpenRead("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"))
                     {
                         using (StreamReader reader = new StreamReader(upd))
                         {
@@ -495,13 +496,12 @@ namespace Portable_Minecraft_Launcher
 
                         lbl_ver.Text = "Downloading Update info...";
                         this.Refresh();
-                        get_info.DownloadFile(new Uri("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"), cd + "\\Update_Info.ini");
                         WebClient upd_dwld = new WebClient();
 
                         upd_dwld.DownloadProgressChanged += new DownloadProgressChangedEventHandler(upd_dwld_DownloadProgressChanged);
                         upd_dwld.DownloadFileCompleted += new AsyncCompletedEventHandler(upd_dwld_DownloadFileCompleted);
 
-                        using (Stream upd = File.Open(cd + "\\Update_info.ini", FileMode.Open))
+                        using (Stream upd = get_info.OpenRead("https://raw.githubusercontent.com/zoltx23/IronAxe/master/Common/Updates/Latest/Update_Info.ini"))
                         {
                             using (StreamReader reader = new StreamReader(upd))
                             {
@@ -613,6 +613,109 @@ namespace Portable_Minecraft_Launcher
         private void btn_about_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This program is made in C#, and uses some Batch scripts. \r\n \r\nOrginal Scripts by MarioMasta64. \r\nThis program is licensed under the Open GNU GPL Source Agreement (v3). \r\n \r\nYou are using version: " + Application.ProductVersion, "dev_about", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_repair_Click(object sender, EventArgs e)
+        {
+            WebClient get_jre = new WebClient();
+            get_jre.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
+            get_jre.DownloadFileCompleted += new AsyncCompletedEventHandler(get_jre_DownloadFileCompleted);
+
+            if (is64Bit == true)
+            {
+                if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                {
+                    Process.Start(cd + "\\bin\\JRE_64.exe");
+                }
+                else
+                {
+                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                    {
+                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                    }
+                    else
+                    {
+                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+                    }
+                }
+
+                lbl_ver.Text = "Download In Progress (JRE)";
+            }
+            else
+            {
+                if (File.Exists(cd + "\\bin\\JRE_32.exe"))
+                {
+                    Process.Start(cd + "\\bin\\JRE_32.exe");
+                }
+                else
+                {
+                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                    {
+                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                    }
+                    else
+                    {
+                        get_jre.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                    }
+                }
+            }
+        }
+
+        private void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+
+            lbl_ver.Text = "Downloading JRE: " + int.Parse(Math.Truncate(percentage).ToString() + "%");
+        }
+
+        private void get_jre_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            if (is64Bit == true)
+            {
+                if (Properties.Settings.Default.dev_overide_arch == "1")
+                {
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                    if (Properties.Settings.Default.dev_download_res == "")
+                    {
+                        Form fm = new dev_get_java();
+                        fm.Show();
+                    }
+                    else
+                    {
+                        lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 32bit mode";
+                        this.Text = "IronAxe Minecraft Launcher: Main ";
+                    }
+                }
+                else
+                {
+                    this.Text = "IronAxe Minecraft Launcher: Main ";
+                    lbl_ver.Text = "Version: " + Application.ProductVersion + " | BETA BUILD | 64bit mode";
+                }
+            }
+
+            try
+            {
+                if (File.Exists(cd + "\\jPortable_8_Update_121.paf.exe"))
+                {
+                    Process jv = new Process();
+                    jv.StartInfo.FileName = cd + "\\jPortable_8_Update_121.paf.exe";
+                    jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
+                    jv.Start();
+                }
+                else
+                {
+                    Process jv = new Process();
+                    jv.StartInfo.FileName = cd + "\\jPortable64_8_Update_121.paf.exe";
+                    jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
+                    jv.Start();
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }

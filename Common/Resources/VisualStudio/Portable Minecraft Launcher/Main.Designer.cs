@@ -137,6 +137,7 @@
             this.btn_repair.Text = "Repair Java";
             this.btn_tooltip.SetToolTip(this.btn_repair, "Re-install Java/Java64 to the \\bin\\CommonFiles directory");
             this.btn_repair.UseVisualStyleBackColor = true;
+            this.btn_repair.Click += new System.EventHandler(this.btn_repair_Click);
             // 
             // btn_about
             // 

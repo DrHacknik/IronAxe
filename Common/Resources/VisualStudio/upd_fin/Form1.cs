@@ -30,6 +30,16 @@ namespace upd_fin
         private void Form1_Load(object sender, EventArgs e)
         {
             lbl_body.Text += "\r\nUpdating to: " + upd + "...";
+            try
+            {
+                File.Delete(cd + "\\IronAxe Minecraft Launcher.exe.old");
+            }
+            catch
+            {
+                MessageBox.Show("There were errors when Finishing the Update!", "upd_fin: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                File.Delete(cd + "\\IronAxe Minecraft Launcher_new.exe");
+                Application.Exit();
+            }
         }
 
         private void dev_upd_Tick(object sender, EventArgs e)
