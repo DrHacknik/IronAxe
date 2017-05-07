@@ -31,6 +31,14 @@ After downloading, a Installer will show; this is the Java Portable Installer. M
 
 ## Versions: 
 
+### 1.6.2: 
+* Fixed some issues
+* Added updater and automatic Updater
+* Refined the interface 
+* The auto-launch Window now shows the default profile that will be loaded, and if Portable JRE is enabled or not.
+* Finished the Option to reinstall Portable JRE. Stores the existing one within "\bin" 
+* Cleaned up the settings menu 
+
 ### 1.6: 
 * Fixed some minor issues
 * Added x64 support (As well as JRE8 x64) 
