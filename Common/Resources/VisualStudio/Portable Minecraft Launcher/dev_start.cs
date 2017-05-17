@@ -44,10 +44,20 @@ namespace Portable_Minecraft_Launcher
 
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form mn = new Main();
-            mn.Show();
-            tmr_int.Stop();
-            Hide();
+            if (Properties.Settings.Default.dev_qtx_gui_en == "1")
+            {
+                Form qtx = new dev_gui();
+                qtx.Show();
+                tmr_int.Stop();
+                Hide();
+            }
+            else
+            {
+                Form mn = new Main();
+                mn.Show();
+                tmr_int.Stop();
+                Hide();
+            }
         }
 
         private void dev_start_Load(object sender, EventArgs e)

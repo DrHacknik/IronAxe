@@ -24,7 +24,14 @@ namespace Portable_Minecraft_Launcher
                 }
                 else
                 {
-                    Application.Run(new Main());
+                    if (Properties.Settings.Default.dev_qtx_gui_en == "1")
+                    {
+                        Application.Run(new dev_gui());
+                    }
+                    else
+                    {
+                        Application.Run(new Main());
+                    }
                 }
             }
             else

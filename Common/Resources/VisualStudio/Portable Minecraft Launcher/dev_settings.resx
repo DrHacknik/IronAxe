@@ -120,9 +120,6 @@
   <metadata name="btn_tooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="btn_tooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="chck_overide_bit.ToolTip" xml:space="preserve">
     <value>Architecture detection is used to determine the arch of your Operating System. 
 This information is then used to determine whether you need a x64 or x32 version

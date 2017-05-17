@@ -19,6 +19,14 @@ namespace Portable_Minecraft_Launcher
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (chck_qtx.Checked == true)
+            {
+                Properties.Settings.Default.dev_qtx_gui_en = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_qtx_gui_en = "0";
+            }
             if (chck_upd.Checked == true)
             {
                 Properties.Settings.Default.dev_auto_upd = "1";
@@ -79,6 +87,10 @@ namespace Portable_Minecraft_Launcher
 
         private void dev_settings_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.dev_qtx_gui_en == "1")
+            {
+                chck_qtx.Checked = true;
+            }
             if (Properties.Settings.Default.dev_auto_upd == "1")
             {
                 chck_upd.Checked = true;

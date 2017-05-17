@@ -187,6 +187,7 @@
             this.pnl_logo.Name = "pnl_logo";
             this.pnl_logo.Size = new System.Drawing.Size(604, 88);
             this.pnl_logo.TabIndex = 15;
+            this.pnl_logo.DoubleClick += new System.EventHandler(this.pnl_logo_DoubleClick);
             // 
             // Main
             // 

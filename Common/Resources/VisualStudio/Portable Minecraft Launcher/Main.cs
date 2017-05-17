@@ -681,5 +681,11 @@ namespace Portable_Minecraft_Launcher
             {
             }
         }
+
+        private void pnl_logo_DoubleClick(object sender, EventArgs e)
+        {
+            Form dg = new dev_gui();
+            dg.Show();
+        }
     }
 }

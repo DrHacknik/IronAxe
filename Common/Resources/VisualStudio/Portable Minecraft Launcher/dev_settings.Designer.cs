@@ -37,12 +37,13 @@
             this.btn_reset_cache = new System.Windows.Forms.Button();
             this.chck_overide_bit = new System.Windows.Forms.CheckBox();
             this.chck_def_pof_st_java = new System.Windows.Forms.CheckBox();
+            this.chck_qtx = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btn_save
             // 
             this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_save.Location = new System.Drawing.Point(117, 130);
+            this.btn_save.Location = new System.Drawing.Point(117, 162);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(92, 23);
             this.btn_save.TabIndex = 0;
@@ -86,7 +87,7 @@
             // btn_reset_cache
             // 
             this.btn_reset_cache.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_reset_cache.Location = new System.Drawing.Point(2, 130);
+            this.btn_reset_cache.Location = new System.Drawing.Point(2, 162);
             this.btn_reset_cache.Name = "btn_reset_cache";
             this.btn_reset_cache.Size = new System.Drawing.Size(109, 23);
             this.btn_reset_cache.TabIndex = 3;
@@ -118,15 +119,26 @@
             this.chck_def_pof_st_java.Text = "Launch with Portable Java?";
             this.chck_def_pof_st_java.UseVisualStyleBackColor = true;
             // 
+            // chck_qtx
+            // 
+            this.chck_qtx.AutoSize = true;
+            this.chck_qtx.Location = new System.Drawing.Point(12, 127);
+            this.chck_qtx.Name = "chck_qtx";
+            this.chck_qtx.Size = new System.Drawing.Size(167, 17);
+            this.chck_qtx.TabIndex = 1;
+            this.chck_qtx.Text = "Use Development QTX GUI? ";
+            this.chck_qtx.UseVisualStyleBackColor = true;
+            // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 154);
+            this.ClientSize = new System.Drawing.Size(211, 186);
             this.ControlBox = false;
             this.Controls.Add(this.chck_def_pof_st_java);
             this.Controls.Add(this.btn_reset_cache);
             this.Controls.Add(this.chck_overide_bit);
+            this.Controls.Add(this.chck_qtx);
             this.Controls.Add(this.chck_upd);
             this.Controls.Add(this.chck_def_prof_st);
             this.Controls.Add(this.btn_save);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Button btn_reset_cache;
         private System.Windows.Forms.CheckBox chck_def_pof_st_java;
         private System.Windows.Forms.CheckBox chck_overide_bit;
+        private System.Windows.Forms.CheckBox chck_qtx;
     }
 }

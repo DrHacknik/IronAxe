@@ -101,6 +101,12 @@
     <Compile Include="dev_get_java.Designer.cs">
       <DependentUpon>dev_get_java.cs</DependentUpon>
     </Compile>
+    <Compile Include="dev_gui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_gui.Designer.cs">
+      <DependentUpon>dev_gui.cs</DependentUpon>
+    </Compile>
     <Compile Include="dev_profile_create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dev_get_java.resx">
       <DependentUpon>dev_get_java.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_gui.resx">
+      <DependentUpon>dev_gui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dev_profile_create.resx">
       <DependentUpon>dev_profile_create.cs</DependentUpon>
@@ -181,6 +190,21 @@
     <Content Include="IRONAXE_LOGO_ICON.ico" />
     <Content Include="PML_LOGO.ico" />
     <Content Include="QCP.ico" />
+    <None Include="Resources\Gmail-48.png" />
+    <None Include="Resources\Discord-48.png" />
+    <None Include="Resources\Download-48.png" />
+    <None Include="Resources\Java-48.png" />
+    <None Include="Resources\New-48.png" />
+    <None Include="Resources\Shield-48.png" />
+    <None Include="Resources\Folder-48.png" />
+    <None Include="Resources\Error-48.png" />
+    <None Include="Resources\Warning Shield-48.png" />
+    <None Include="Resources\Available Updates-48.png" />
+    <None Include="Resources\Installing Updates-48.png" />
+    <None Include="Resources\Downloading Updates-48.png" />
+    <None Include="Resources\Delete-48.png" />
+    <None Include="Resources\dedv_gui_panel1.png" />
+    <None Include="Resources\dedv_gui_panel.png" />
     <None Include="Resources\IRONAXE_LOGO.png" />
     <None Include="Resources\PML_PNL.png" />
     <None Include="Resources\PML_LOGO.png" />

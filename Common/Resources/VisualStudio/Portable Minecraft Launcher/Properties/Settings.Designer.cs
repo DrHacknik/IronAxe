@@ -118,5 +118,17 @@ namespace Portable_Minecraft_Launcher.Properties {
                 this["dev_auto_upd"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_qtx_gui_en {
+            get {
+                return ((string)(this["dev_qtx_gui_en"]));
+            }
+            set {
+                this["dev_qtx_gui_en"] = value;
+            }
+        }
     }
 }
