@@ -31,6 +31,11 @@ After downloading, a Installer will show; this is the Java Portable Installer. M
 
 ## Versions: 
 
+### 1.7: 
+* Fixed some bugs
+* Refined the Re Install java option
+* Working on a new Interface. This interface is Simplistic, and easy to navigate; as well as Material/Flat Themed. It can be enabled by going within the Settings and ticking "Use Development QTX GUI?" Please restart the app afterwords. 
+
 ### 1.6.2: 
 * Fixed some issues
 * Added updater and automatic Updater
