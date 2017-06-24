@@ -26,11 +26,11 @@ namespace Portable_Minecraft_Launcher
                 {
                     if (Properties.Settings.Default.dev_qtx_gui_en == "1")
                     {
-                        Application.Run(new dev_gui());
+                        Application.Run(new Main());
                     }
                     else
                     {
-                        Application.Run(new Main());
+                        Application.Run(new dev_gui());
                     }
                 }
             }

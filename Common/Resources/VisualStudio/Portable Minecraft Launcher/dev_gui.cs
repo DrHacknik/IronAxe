@@ -17,6 +17,7 @@ namespace Portable_Minecraft_Launcher
     {
         private string cd = Application.StartupPath;
         private bool is64Bit = System.Environment.Is64BitOperatingSystem;
+        private DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\data\\profiles\\");
 
         private void set_top(Object sender)
         {
@@ -78,6 +79,10 @@ namespace Portable_Minecraft_Launcher
             {
                 chck_def_pof_st_java.Checked = true;
             }
+            if (Properties.Settings.Default.dev_runbck == "1")
+            {
+                chck_runbck.Checked = true;
+            }
         }
 
         private void btn_help_Click(object sender, EventArgs e)
@@ -120,6 +125,15 @@ namespace Portable_Minecraft_Launcher
         {
             tab_menu.SelectedTab = tab_main;
             lbl_ver.Text += Application.ProductVersion;
+
+            if (Properties.Settings.Default.dev_what_new == Application.ProductVersion == false)
+            {
+                Form wn = new dev_whatisnew();
+                wn.Show();
+            }
+            else
+            {
+            }
             if (Properties.Settings.Default.dev_def_prof == " ")
             {
                 lbl_def.Text += " Nothing";
@@ -514,13 +528,27 @@ namespace Portable_Minecraft_Launcher
                     {
                         File.WriteAllText(cd + "\\profile.txt", cmb_prof.Text);
                         Process.Start(cd + "\\start_mc_jre.bat");
-                        Application.Exit();
+                        if (Properties.Settings.Default.dev_runbck == "1")
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            Application.Exit();
+                        }
                     }
                     else
                     {
                         File.WriteAllText(cd + "\\profile.txt", cmb_prof.Text);
                         Process.Start(cd + "\\start_mc_sys.bat");
-                        Application.Exit();
+                        if (Properties.Settings.Default.dev_runbck == "1")
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            Application.Exit();
+                        }
                     }
                 }
                 catch
@@ -534,9 +562,23 @@ namespace Portable_Minecraft_Launcher
         private void btn_create_prof_Click(object sender, EventArgs e)
         {
             Directory.CreateDirectory(cd + "\\data\\profiles\\" + txt_prof.Text);
-            DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\data\\profiles\\");
             DirectoryInfo[] folders = obj.GetDirectories();
             cmb_prof.DataSource = folders;
+
+            DialogResult dr = MessageBox.Show("The following profile was created: " + txt_prof.Text + ". Is that okay?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            switch (dr)
+            {
+                case System.Windows.Forms.DialogResult.Yes:
+
+                    break;
+
+                case System.Windows.Forms.DialogResult.No:
+                    Directory.Delete(cd + "\\data\\profiles\\" + txt_prof.Text, true);
+                    DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\data\\profiles\\");
+
+                    cmb_prof.DataSource = folders;
+                    break;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -561,6 +603,7 @@ namespace Portable_Minecraft_Launcher
             if (chck_qtx.Checked == true)
             {
                 Properties.Settings.Default.dev_qtx_gui_en = "1";
+                MessageBox.Show("Do remember that the OLD GUI contains outdated code, and resources. It may not work as smoothly, and is no longer updated!", "IronAxe: Settings - Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -597,6 +640,14 @@ namespace Portable_Minecraft_Launcher
             else
             {
                 Properties.Settings.Default.dev_def_prof_st_java = "0";
+            }
+            if (chck_runbck.Checked == true)
+            {
+                Properties.Settings.Default.dev_runbck = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_runbck = "0";
             }
             if (chck_upd.Checked == true)
             {
@@ -668,10 +719,16 @@ namespace Portable_Minecraft_Launcher
                                         if (Properties.Settings.Default.dev_overide_arch == "1")
                                         {
                                             lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 32bit mode | QTXGUI";
+                                            lbl_upd.Text = "No new updates";
+                                            pcx_upd.BackgroundImage = Properties.Resources.Error_48;
+                                            this.Refresh();
                                         }
                                         else
                                         {
                                             lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 64bit mode | QTXGUI";
+                                            lbl_upd.Text = "No new updates";
+                                            pcx_upd.BackgroundImage = Properties.Resources.Error_48;
+                                            this.Refresh();
                                         }
                                         return;
                                     }
@@ -751,10 +808,16 @@ namespace Portable_Minecraft_Launcher
                                         if (Properties.Settings.Default.dev_overide_arch == "1")
                                         {
                                             lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 32bit mode | QTXGUI";
+                                            lbl_upd.Text = "No new updates";
+                                            pcx_upd.BackgroundImage = Properties.Resources.Error_48;
+                                            this.Refresh();
                                         }
                                         else
                                         {
                                             lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 64bit mode | QTXGUI";
+                                            lbl_upd.Text = "No new updates";
+                                            pcx_upd.BackgroundImage = Properties.Resources.Error_48;
+                                            this.Refresh();
                                         }
                                         return;
                                     }
@@ -886,15 +949,6 @@ namespace Portable_Minecraft_Launcher
                 if (Properties.Settings.Default.dev_overide_arch == "1")
                 {
                     lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 32bit mode | QTXGUI";
-                    if (Properties.Settings.Default.dev_download_res == "")
-                    {
-                        Form fm = new dev_get_java();
-                        fm.Show();
-                    }
-                    else
-                    {
-                        lbl_ver.Text = "You're using IronAxe Version: " + Application.ProductVersion + "\r\nBETA BUILD | 64bit mode | QTXGUI";
-                    }
                 }
                 else
                 {
@@ -910,7 +964,7 @@ namespace Portable_Minecraft_Launcher
             {
                 if (File.Exists(cd + "\\jPortable_8_Update_121.paf.exe"))
                 {
-                    btn_help_jre.Text = "Download Resources";
+                    btn_help_jre.Text = "Re-Install Java";
                     Process jv = new Process();
                     jv.StartInfo.FileName = cd + "\\jPortable_8_Update_121.paf.exe";
                     jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
@@ -918,7 +972,7 @@ namespace Portable_Minecraft_Launcher
                 }
                 else
                 {
-                    btn_help_jre.Text = "Download Resources";
+                    btn_help_jre.Text = "Re-Install Java";
                     Process jv = new Process();
                     jv.StartInfo.FileName = cd + "\\jPortable64_8_Update_121.paf.exe";
                     jv.StartInfo.Arguments = "/destination=" + cd + "\\bin\\";
@@ -961,24 +1015,113 @@ namespace Portable_Minecraft_Launcher
             down.DownloadProgressChanged += new DownloadProgressChangedEventHandler(down_DownloadProgressChanged);
             down.DownloadFileCompleted += new AsyncCompletedEventHandler(down_DownloadFileCompleted);
 
-            //Starts the download
-            if (is64Bit == true)
+            //Check to see if files already exist (Delete old backups), and back them up
+            if (File.Exists(cd + "\\bin\\JRE_32.exe.old"))
             {
-                if (Properties.Settings.Default.dev_overide_arch == "1")
+                File.Delete(cd + "\\bin\\JRE_32.exe.old");
+            }
+            else
+            {
+                if (File.Exists(cd + "\\bin\\JRE_64.exe.old"))
                 {
-                    down.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                    File.Delete(cd + "\\bin\\JRE_64.exe.old");
+                }
+            }
+            if (File.Exists(cd + "\\bin\\minecraft.jar.old"))
+            {
+                File.Delete(cd + "\\bin\\minecraft.jar.old");
+            }
+
+            if (File.Exists(cd + "\\bin\\JRE_32.exe"))
+            {
+                File.Move(cd + "\\bin\\JRE_32.exe", cd + "\\bin\\JRE_32.exe.old");
+            }
+            else
+            {
+                if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                {
+                    File.Move(cd + "\\bin\\JRE_64.exe", cd + "\\bin\\JRE_64.exe.old");
+                }
+            }
+            if (File.Exists(cd + "\\bin\\minecraft.jar"))
+            {
+                File.Move(cd + "\\bin\\minecraft.jar", cd + "\\bin\\minecraft.jar.old");
+            }
+            else
+            {
+            }
+
+            //Starts the download
+            try
+            {
+                if (is64Bit == true)
+                {
+                    if (Properties.Settings.Default.dev_overide_arch == "1")
+                    {
+                        down.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable_8_Update_121.paf.exe"), cd + "\\jPortable_8_Update_121.paf.exe");
+                    }
+                    else
+                    {
+                        down.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+                    }
+                }
+            }
+            catch
+            {
+                if (File.Exists(cd + "\\bin\\JRE_32.exe"))
+                {
+                    File.Delete(cd + "\\bin\\JRE_32.exe");
                 }
                 else
                 {
-                    down.DownloadFileAsync(new Uri("http://downloads.sourceforge.net/portableapps/jPortable64_8_Update_121.paf.exe"), cd + "\\jPortable64_8_Update_121.paf.exe");
+                    if (File.Exists(cd + "\\bin\\JRE_64.exe"))
+                    {
+                        File.Delete(cd + "\\bin\\JRE_64.exe");
+                    }
                 }
+
+                if (File.Exists(cd + "\\bin\\JRE_32.exe.old"))
+                {
+                    File.Move(cd + "\\bin\\JRE_32.exe.old", cd + "\\bin\\JRE_32.exe");
+                }
+                else
+                {
+                    if (File.Exists(cd + "\\bin\\JRE_64.exe.old"))
+                    {
+                        File.Move(cd + "\\bin\\JRE_64.exe.old", cd + "\\bin\\JRE_64.exe");
+                    }
+                }
+
+                MessageBox.Show("We were unable to download the latest Java Runtime file form SourceForge's servers. So, the old one (If it was there) was restored.", "IronAxe: Download error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            //Prepare to download Minecraft
             WebClient get_mc = new WebClient();
             get_mc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(getmc_DownloadProgressChanged);
             get_mc.DownloadFileCompleted += new AsyncCompletedEventHandler(getmc_DownloadFileCompleted);
 
             //Starts the download
-            get_mc.DownloadFileAsync(new Uri("http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"), cd + "\\bin\\minecraft.jar");
+            try
+            {
+                get_mc.DownloadFileAsync(new Uri("http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"), cd + "\\bin\\minecraft.jar");
+            }
+            catch
+            {
+                if (File.Exists(cd + "\\bin\\minecraft.jar"))
+                {
+                    File.Delete(cd + "\\bin\\minecraft.jar");
+                }
+
+                if (File.Exists(cd + "\\bin\\minecraft.jar.old"))
+                {
+                    File.Move(cd + "\\bin\\minecraft.jar.old", cd + "\\bin\\minecraft.jar");
+                }
+                else
+                {
+                }
+
+                MessageBox.Show("We were unable to download the latest Minecraft.jar file form Mojang's servers. So, the old one (If it was there) was restored.", "IronAxe: Download error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void getmc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -1053,6 +1196,25 @@ namespace Portable_Minecraft_Launcher
             else
             {
                 chck_def_pof_st_java.Enabled = false;
+            }
+        }
+
+        private void btn_del_prof_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you wish to delete the profile: " + cmb_prof.SelectedItem + "? You will NOT be able to recover the deleted files!", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            switch (dr)
+            {
+                case System.Windows.Forms.DialogResult.Yes:
+                    Directory.Delete(cd + "\\data\\profiles\\" + cmb_prof.SelectedItem, true);
+                    this.Refresh();
+                    DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\data\\profiles\\");
+                    DirectoryInfo[] folders = obj.GetDirectories();
+                    cmb_prof.DataSource = folders;
+                    break;
+
+                case System.Windows.Forms.DialogResult.No:
+
+                    break;
             }
         }
     }

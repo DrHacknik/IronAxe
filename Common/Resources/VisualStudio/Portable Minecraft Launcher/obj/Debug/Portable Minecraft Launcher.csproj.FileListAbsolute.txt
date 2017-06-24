@@ -39,3 +39,4 @@ C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Mi
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\IronAxe Minecraft Launcher.exe
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\IronAxe Minecraft Launcher.pdb
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_gui.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\Debug\Portable_Minecraft_Launcher.dev_whatisnew.resources

@@ -146,7 +146,7 @@
         gg==
 </value>
   </data>
-  <data name="btn_load_profile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_load_prof.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAUBJREFUaEPt
         lw0NwjAQRicBCUhAAhKQgAQcIAEJSEACEpCABCTAvYQmZPn2Q1u6I7mXvGTZoLl2d9e1C4IgCILKbMyD
@@ -200,6 +200,20 @@
         SbAIZ0LhvO66cNjk6UGvkBp1Ml0dCMHBzI8UpZbX5qBEKBeaNgrYU8fqn4QdxSkTL4rgFx/Yduz4vzgc
         fgERdxRJy8Q+AwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="lbl_ext_body_two.Text" xml:space="preserve">
+    <value>There will be support for adding tons of Mods, straight from here. 
+This also includes the ability to manage said mods. You will mostly be 
+using Forge Mod loader (Since IronAxe will be requiring it.) 
+Using Forge mod loader allows you to have multiple mods inside of one profile. 
+Making it easier to load, add, and remove certain mods. Without affecting others. </value>
+  </data>
+  <data name="lbl_ext_body.Text" xml:space="preserve">
+    <value>This feature isn't quite ready yet; and it currently in Testing and development stages.
+We are sorry for any inconvienance.
+
+Extenson support version: 0.0.0.1 
+(This is just debug information, you may ignore it)</value>
   </data>
   <metadata name="sett_applied.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

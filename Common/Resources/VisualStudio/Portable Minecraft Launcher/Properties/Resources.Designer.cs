@@ -123,6 +123,16 @@ namespace Portable_Minecraft_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Extensions_Folder_48 {
+            get {
+                object obj = ResourceManager.GetObject("Extensions Folder-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Folder_48 {
             get {
                 object obj = ResourceManager.GetObject("Folder_48", resourceCulture);

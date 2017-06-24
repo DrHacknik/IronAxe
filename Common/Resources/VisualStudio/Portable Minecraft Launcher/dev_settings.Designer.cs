@@ -43,7 +43,7 @@
             // btn_save
             // 
             this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_save.Location = new System.Drawing.Point(117, 162);
+            this.btn_save.Location = new System.Drawing.Point(160, 162);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(92, 23);
             this.btn_save.TabIndex = 0;
@@ -124,16 +124,16 @@
             this.chck_qtx.AutoSize = true;
             this.chck_qtx.Location = new System.Drawing.Point(12, 127);
             this.chck_qtx.Name = "chck_qtx";
-            this.chck_qtx.Size = new System.Drawing.Size(167, 17);
+            this.chck_qtx.Size = new System.Drawing.Size(244, 17);
             this.chck_qtx.TabIndex = 1;
-            this.chck_qtx.Text = "Use Development QTX GUI? ";
+            this.chck_qtx.Text = "Use older Interface rather than the QTX GUI? ";
             this.chck_qtx.UseVisualStyleBackColor = true;
             // 
             // dev_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 186);
+            this.ClientSize = new System.Drawing.Size(254, 186);
             this.ControlBox = false;
             this.Controls.Add(this.chck_def_pof_st_java);
             this.Controls.Add(this.btn_reset_cache);

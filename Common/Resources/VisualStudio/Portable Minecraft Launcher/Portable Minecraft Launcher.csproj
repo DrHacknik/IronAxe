@@ -131,6 +131,12 @@
     <Compile Include="dev_start.Designer.cs">
       <DependentUpon>dev_start.cs</DependentUpon>
     </Compile>
+    <Compile Include="dev_whatisnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev_whatisnew.Designer.cs">
+      <DependentUpon>dev_whatisnew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dev_start.resx">
       <DependentUpon>dev_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dev_whatisnew.resx">
+      <DependentUpon>dev_whatisnew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -190,6 +199,7 @@
     <Content Include="IRONAXE_LOGO_ICON.ico" />
     <Content Include="PML_LOGO.ico" />
     <Content Include="QCP.ico" />
+    <None Include="Resources\Extensions Folder-48.png" />
     <None Include="Resources\Gmail-48.png" />
     <None Include="Resources\Discord-48.png" />
     <None Include="Resources\Download-48.png" />
