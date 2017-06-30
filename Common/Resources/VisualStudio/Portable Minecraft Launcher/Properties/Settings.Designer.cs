@@ -154,5 +154,17 @@ namespace Portable_Minecraft_Launcher.Properties {
                 this["dev_runbck"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dev_runbck_min {
+            get {
+                return ((string)(this["dev_runbck_min"]));
+            }
+            set {
+                this["dev_runbck_min"] = value;
+            }
+        }
     }
 }

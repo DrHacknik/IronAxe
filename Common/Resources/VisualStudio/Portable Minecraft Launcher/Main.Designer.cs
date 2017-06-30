@@ -42,6 +42,7 @@
             this.lbl_ver = new System.Windows.Forms.Label();
             this.pnl = new System.Windows.Forms.PictureBox();
             this.pnl_logo = new System.Windows.Forms.Panel();
+            this.lbl_support = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pnl)).BeginInit();
             this.pnl_logo.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             // btn_reset
             // 
             this.btn_reset.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_reset.Location = new System.Drawing.Point(25, 12);
+            this.btn_reset.Location = new System.Drawing.Point(103, 12);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(118, 44);
             this.btn_reset.TabIndex = 0;
@@ -61,7 +62,7 @@
             // btn_down
             // 
             this.btn_down.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_down.Location = new System.Drawing.Point(25, 81);
+            this.btn_down.Location = new System.Drawing.Point(103, 81);
             this.btn_down.Name = "btn_down";
             this.btn_down.Size = new System.Drawing.Size(118, 44);
             this.btn_down.TabIndex = 1;
@@ -73,7 +74,7 @@
             // btn_profile_create
             // 
             this.btn_profile_create.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_profile_create.Location = new System.Drawing.Point(166, 12);
+            this.btn_profile_create.Location = new System.Drawing.Point(244, 12);
             this.btn_profile_create.Name = "btn_profile_create";
             this.btn_profile_create.Size = new System.Drawing.Size(118, 44);
             this.btn_profile_create.TabIndex = 2;
@@ -85,7 +86,7 @@
             // btn_profile_load
             // 
             this.btn_profile_load.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_profile_load.Location = new System.Drawing.Point(313, 12);
+            this.btn_profile_load.Location = new System.Drawing.Point(391, 12);
             this.btn_profile_load.Name = "btn_profile_load";
             this.btn_profile_load.Size = new System.Drawing.Size(118, 44);
             this.btn_profile_load.TabIndex = 3;
@@ -97,7 +98,7 @@
             // btn_update
             // 
             this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_update.Location = new System.Drawing.Point(459, 12);
+            this.btn_update.Location = new System.Drawing.Point(537, 12);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(118, 44);
             this.btn_update.TabIndex = 7;
@@ -118,7 +119,7 @@
             // btn_settings
             // 
             this.btn_settings.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_settings.Location = new System.Drawing.Point(313, 81);
+            this.btn_settings.Location = new System.Drawing.Point(391, 81);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(118, 44);
             this.btn_settings.TabIndex = 10;
@@ -130,7 +131,7 @@
             // btn_repair
             // 
             this.btn_repair.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_repair.Location = new System.Drawing.Point(166, 81);
+            this.btn_repair.Location = new System.Drawing.Point(244, 81);
             this.btn_repair.Name = "btn_repair";
             this.btn_repair.Size = new System.Drawing.Size(118, 44);
             this.btn_repair.TabIndex = 12;
@@ -142,7 +143,7 @@
             // btn_about
             // 
             this.btn_about.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_about.Location = new System.Drawing.Point(459, 81);
+            this.btn_about.Location = new System.Drawing.Point(537, 81);
             this.btn_about.Name = "btn_about";
             this.btn_about.Size = new System.Drawing.Size(118, 44);
             this.btn_about.TabIndex = 14;
@@ -172,7 +173,7 @@
             this.pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(604, 219);
+            this.pnl.Size = new System.Drawing.Size(761, 219);
             this.pnl.TabIndex = 8;
             this.pnl.TabStop = false;
             // 
@@ -181,20 +182,34 @@
             this.pnl_logo.BackColor = System.Drawing.Color.Transparent;
             this.pnl_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.IRONAXE_LOGO;
             this.pnl_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnl_logo.Controls.Add(this.lbl_support);
             this.pnl_logo.Controls.Add(this.lbl_ver);
             this.pnl_logo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_logo.Location = new System.Drawing.Point(0, 131);
             this.pnl_logo.Name = "pnl_logo";
-            this.pnl_logo.Size = new System.Drawing.Size(604, 88);
+            this.pnl_logo.Size = new System.Drawing.Size(761, 88);
             this.pnl_logo.TabIndex = 15;
             this.pnl_logo.DoubleClick += new System.EventHandler(this.pnl_logo_DoubleClick);
+            // 
+            // lbl_support
+            // 
+            this.lbl_support.AutoSize = true;
+            this.lbl_support.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_support.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_support.ForeColor = System.Drawing.Color.Red;
+            this.lbl_support.Location = new System.Drawing.Point(368, 75);
+            this.lbl_support.Name = "lbl_support";
+            this.lbl_support.Size = new System.Drawing.Size(390, 12);
+            this.lbl_support.TabIndex = 8;
+            this.lbl_support.Text = "This old \'GUI\' is no longer supported or maintained. Please use the QTX GUI!";
+            this.btn_tooltip.SetToolTip(this.lbl_support, "This is the Current Version that you\'re using.");
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.PML_PNL;
-            this.ClientSize = new System.Drawing.Size(604, 219);
+            this.ClientSize = new System.Drawing.Size(761, 219);
             this.Controls.Add(this.pnl_logo);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.btn_repair);
@@ -236,6 +251,7 @@
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.Panel pnl_logo;
         private System.Windows.Forms.Label lbl_ver;
+        private System.Windows.Forms.Label lbl_support;
     }
 }
 

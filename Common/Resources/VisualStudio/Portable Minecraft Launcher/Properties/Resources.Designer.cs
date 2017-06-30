@@ -83,6 +83,26 @@ namespace Portable_Minecraft_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dev_ext_no_logo {
+            get {
+                object obj = ResourceManager.GetObject("dev_ext_no_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dev_selected {
+            get {
+                object obj = ResourceManager.GetObject("dev_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Discord_48 {
             get {
                 object obj = ResourceManager.GetObject("Discord-48", resourceCulture);
@@ -96,6 +116,16 @@ namespace Portable_Minecraft_Launcher.Properties {
         internal static System.Drawing.Bitmap Download_48 {
             get {
                 object obj = ResourceManager.GetObject("Download-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Download_481 {
+            get {
+                object obj = ResourceManager.GetObject("Download-481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

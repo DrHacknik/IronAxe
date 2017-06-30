@@ -117,6 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbl_new.Text" xml:space="preserve">
+    <value> • Refined the Interface 
+ • Fixed some minor bugs
+ • Refined the updater 
+ • Fixed issues with the download code
+ (It didn't properly download the Minecraft.jar 
+ before hand.) 
+
+ • Improved the profile management. You can now delete 
+ profiles.
+ • Improved overall performance. 
+ • Working on the Extension Management 
+ • Added the option of having the Window to Minimize or stay open 
+when launching Minecraft.
+• NOTE: I am also ridding of the old Interface; but you can re-enable it if 
+you wish to do so. 
+ • Added some cute kittens
+ 
+
+
+ 
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="main_logo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -282,24 +305,6 @@
         PGAB0kAeSASZ/E58JHUgGq9XZ+DvaO/Dj3v+HWKmALw8gICnafBKU3gqSEObjcQNZPq9Ex/rTDySPbyD
         j9+1H438NS31bMlTrEkUti1nX7mEmd+37cPmt205+8rlcg1fYsgogGaAowDIAmko1SACkIkXLiCZ4/fh
         AyAcyy3/PvzbY9u2/T80amPsWzyCigAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="lbl_new.Text" xml:space="preserve">
-    <value> • Refined Interface 
- • Fixed some minor bugs
- • Refined the updater 
- • Fixed issues with the download code
- (It didn't properly download the Minecraft.jar 
- before hand.) 
-
- • Improved the profile management. You can now delete 
- profiles.
- • Improved overall performance. 
- • Added some cute kittens
-
-
-
- 
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

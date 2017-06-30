@@ -121,9 +121,9 @@
             this.lbl_main.ForeColor = System.Drawing.Color.White;
             this.lbl_main.Location = new System.Drawing.Point(74, 29);
             this.lbl_main.Name = "lbl_main";
-            this.lbl_main.Size = new System.Drawing.Size(217, 20);
+            this.lbl_main.Size = new System.Drawing.Size(141, 20);
             this.lbl_main.TabIndex = 1;
-            this.lbl_main.Text = "IronAxe: What is new in %VER%";
+            this.lbl_main.Text = "IronAxe: Agreement";
             // 
             // main_logo
             // 

@@ -199,6 +199,9 @@
     <Content Include="IRONAXE_LOGO_ICON.ico" />
     <Content Include="PML_LOGO.ico" />
     <Content Include="QCP.ico" />
+    <None Include="Resources\dev_selected.png" />
+    <None Include="Resources\Download-481.png" />
+    <None Include="Resources\dev_ext_no_logo.png" />
     <None Include="Resources\Extensions Folder-48.png" />
     <None Include="Resources\Gmail-48.png" />
     <None Include="Resources\Discord-48.png" />

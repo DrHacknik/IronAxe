@@ -30,13 +30,63 @@ namespace Portable_Minecraft_Launcher
                 if (Properties.Settings.Default.dev_def_prof_st_java == "1")
                 {
                     File.WriteAllText(cd + "\\profile.txt", Properties.Settings.Default.dev_def_prof);
-                    Process.Start(cd + "\\start_mc_jre.bat");
-                    Application.Exit();
+                    Process jre = new Process();
+                    jre.StartInfo.FileName = cd + "\\start_mc_jre.bat";
+                    jre.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    jre.Start();
+                    jre.WaitForExit();
                 }
                 else
                 {
                     File.WriteAllText(cd + "\\profile.txt", Properties.Settings.Default.dev_def_prof);
-                    Process.Start(cd + "\\start_mc_sys.bat");
+                    Process sys = new Process();
+                    sys.StartInfo.FileName = cd + "\\start_mc_sys.bat";
+                    sys.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    sys.Start();
+                    sys.WaitForExit();
+                }
+                tmr_int.Stop();
+                if (Properties.Settings.Default.dev_runbck == "1")
+                {
+                    if (Properties.Settings.Default.dev_runbck_min == "1")
+                    {
+                        if (Properties.Settings.Default.dev_qtx_gui_en == "1")
+                        {
+                            Form qtx = new Main();
+                            qtx.Show();
+                            qtx.WindowState = FormWindowState.Minimized;
+                            tmr_int.Stop();
+                            Hide();
+                        }
+                        else
+                        {
+                            Form mn = new dev_gui();
+                            mn.Show();
+                            mn.WindowState = FormWindowState.Minimized;
+                            tmr_int.Stop();
+                            Hide();
+                        }
+                    }
+                    else
+                    {
+                        if (Properties.Settings.Default.dev_qtx_gui_en == "1")
+                        {
+                            Form qtx = new Main();
+                            qtx.Show();
+                            tmr_int.Stop();
+                            Hide();
+                        }
+                        else
+                        {
+                            Form mn = new dev_gui();
+                            mn.Show();
+                            tmr_int.Stop();
+                            Hide();
+                        }
+                    }
+                }
+                else
+                {
                     Application.Exit();
                 }
             }
@@ -46,14 +96,14 @@ namespace Portable_Minecraft_Launcher
         {
             if (Properties.Settings.Default.dev_qtx_gui_en == "1")
             {
-                Form qtx = new dev_gui();
+                Form qtx = new Main();
                 qtx.Show();
                 tmr_int.Stop();
                 Hide();
             }
             else
             {
-                Form mn = new Main();
+                Form mn = new dev_gui();
                 mn.Show();
                 tmr_int.Stop();
                 Hide();

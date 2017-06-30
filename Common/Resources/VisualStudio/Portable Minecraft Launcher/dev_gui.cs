@@ -59,6 +59,10 @@ namespace Portable_Minecraft_Launcher
             set_top(sender);
             tab_menu.SelectedTab = tab_settings;
 
+            if (Properties.Settings.Default.dev_runbck_min == "1")
+            {
+                chck_min.Checked = true;
+            }
             if (Properties.Settings.Default.dev_qtx_gui_en == "1")
             {
                 chck_qtx.Checked = true;
@@ -527,10 +531,23 @@ namespace Portable_Minecraft_Launcher
                     if (chck_java.Checked == true)
                     {
                         File.WriteAllText(cd + "\\profile.txt", cmb_prof.Text);
-                        Process.Start(cd + "\\start_mc_jre.bat");
+                        Process jre = new Process();
+                        jre.StartInfo.FileName = cd + "\\start_mc_jre.bat";
+                        jre.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        jre.Start();
+                        jre.WaitForExit();
+
                         if (Properties.Settings.Default.dev_runbck == "1")
                         {
-                            return;
+                            if (Properties.Settings.Default.dev_runbck_min == "1")
+                            {
+                                this.WindowState = FormWindowState.Minimized;
+                                return;
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                         else
                         {
@@ -540,10 +557,22 @@ namespace Portable_Minecraft_Launcher
                     else
                     {
                         File.WriteAllText(cd + "\\profile.txt", cmb_prof.Text);
-                        Process.Start(cd + "\\start_mc_sys.bat");
+                        Process sys = new Process();
+                        sys.StartInfo.FileName = cd + "\\start_mc_sys.bat";
+                        sys.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        sys.Start();
+                        sys.WaitForExit();
                         if (Properties.Settings.Default.dev_runbck == "1")
                         {
-                            return;
+                            if (Properties.Settings.Default.dev_runbck_min == "1")
+                            {
+                                this.WindowState = FormWindowState.Minimized;
+                                return;
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                         else
                         {
@@ -587,7 +616,8 @@ namespace Portable_Minecraft_Launcher
             switch (dr)
             {
                 case System.Windows.Forms.DialogResult.Yes:
-                    Properties.Settings.Default.dev_agree = "0";
+                    Properties.Settings.Default.Reset();
+                    Properties.Settings.Default.dev_download_res = "1";
                     Properties.Settings.Default.Save();
                     Application.Restart();
                     break;
@@ -649,6 +679,14 @@ namespace Portable_Minecraft_Launcher
             {
                 Properties.Settings.Default.dev_runbck = "0";
             }
+            if (chck_min.Checked == true)
+            {
+                Properties.Settings.Default.dev_runbck_min = "1";
+            }
+            else
+            {
+                Properties.Settings.Default.dev_runbck_min = "0";
+            }
             if (chck_upd.Checked == true)
             {
             }
@@ -671,6 +709,39 @@ namespace Portable_Minecraft_Launcher
         {
             set_top(sender);
             tab_menu.SelectedTab = tab_extensions;
+
+            //Checks the Directories for Extensions
+            if (Directory.Exists(cd + "\\bin\\CommonFiles\\Extensions") == false)
+            {
+                Directory.CreateDirectory(cd + "\\bin\\CommonFiles\\Extensions");
+            }
+            else
+            {
+            }
+            //Checks to see if Forge is installed; if not, it is marked for install
+            if (Directory.Exists(cd + "\\bin\\CommonFiles\\Extensions\\Forge") == false)
+            {
+                Directory.CreateDirectory(cd + "\\bin\\CommonFiles\\Extensions\\Forge");
+                if (File.Exists(cd + "\\bin\\CommonFiles\\Extensions\\Forge\\_inf") == false)
+                {
+                    //File.CreateText(cd + "\\bin\\CommonFiles\\Extensions\\Forge\\_install");
+                    File.WriteAllText(cd + "\\bin\\CommonFiles\\Extensions\\Forge\\_inf", "INSTALL=TRUE \r\nINSTALLED=FALSE");
+                }
+            }
+            else
+            {
+            }
+
+            //try
+            //{
+            //    pcx_dev_ext_logo.BackgroundImage = Image.FromFile(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_logo.png");
+            //    lbl_dev_ext_name.Text = cmb_dev_ext.SelectedItem.ToString();
+            //    lbl_dev_ext_name_body.Text = File.ReadAllText(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_inf_body");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Unable to load extensions. Please try again.", "IronAxe: Extensions - Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -1215,6 +1286,78 @@ namespace Portable_Minecraft_Launcher
                 case System.Windows.Forms.DialogResult.No:
 
                     break;
+            }
+        }
+
+        private void pcx_ext_logo_Click(object sender, EventArgs e)
+        {
+            tab_menu.SelectedTab = tab_dev_extensions;
+            DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\bin\\CommonFiles\\Extensions");
+            DirectoryInfo[] extensions = obj.GetDirectories();
+            cmb_dev_ext.DataSource = extensions;
+        }
+
+        private void btn_dev_ext_refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pcx_dev_ext_logo.BackgroundImage = Image.FromFile(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_logo.png");
+                lbl_dev_ext_name.Text = cmb_dev_ext.SelectedItem.ToString();
+                lbl_dev_ext_name_body.Text = File.ReadAllText(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_inf_body");
+            }
+            catch
+            {
+                MessageBox.Show("Unable to load extensions. Please try again.", "IronAxe: Extensions - Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void check_dir_ext_Tick(object sender, EventArgs e)
+        {
+            DirectoryInfo obj = new DirectoryInfo(Application.StartupPath + "\\bin\\CommonFiles\\Extensions");
+            DirectoryInfo[] extensions = obj.GetDirectories();
+            cmb_dev_ext.DataSource = extensions;
+            check_dir_ext.Stop();
+        }
+
+        private void btn_dev_ext_del_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Flushes Image out of Application Memory
+                pcx_dev_ext_logo.BackgroundImage.Dispose();
+
+                //Removes the folder
+                Directory.Delete(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text, true);
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Delete the selected extension. Please try again.", "IronAxe: Extensions - Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmb_dev_ext_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                pcx_dev_ext_logo.BackgroundImage = Image.FromFile(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_logo.png");
+                lbl_dev_ext_name.Text = cmb_dev_ext.SelectedItem.ToString();
+                lbl_dev_ext_name_body.Text = File.ReadAllText(cd + "\\bin\\CommonFiles\\Extensions\\" + cmb_dev_ext.Text + "\\_inf_body");
+            }
+            catch
+            {
+                MessageBox.Show("Unable to load extension. Please try again.", "IronAxe: Extensions - Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chck_runbck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chck_runbck.Checked == true)
+            {
+                chck_min.Enabled = true;
+            }
+            else
+            {
+                chck_min.Enabled = false;
             }
         }
     }

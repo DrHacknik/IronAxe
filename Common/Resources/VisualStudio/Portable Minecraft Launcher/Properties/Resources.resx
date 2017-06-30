@@ -121,11 +121,11 @@
   <data name="Downloading_Updates_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Downloading Updates-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Error_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Error-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Available_Updates_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Available Updates-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gmail-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gmail-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,6 +139,12 @@
   <data name="Delete_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dev_ext_no_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dev_ext_no_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PML_PNL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PML_PNL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Shield_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shield-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,14 +157,17 @@
   <data name="Folder_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Extensions Folder-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Extensions Folder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Java-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Java-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PML_PNL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PML_PNL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Error_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Error-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warning_Shield_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning Shield-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +175,7 @@
   <data name="PML_LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PML_LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Extensions Folder-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Extensions Folder-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dev_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dev_selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
