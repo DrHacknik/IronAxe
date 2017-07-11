@@ -42,7 +42,7 @@ After downloading, a Installer will show; this is the Java Portable Installer. M
 * Improved overall performance. 
 * Working on the Extension Management. 
 * Added the option of having the Window to Minimize or stay open when launching Minecraft.
-* NOTE: I am also ridding of hte old Interface; but you can re-enable it if you wish to do so. 
+* NOTE: I am also ridding of the old Interface; but you can re-enable it if you wish to do so. 
 * Addeds some cute kittens.  
 
 ### 1.7: 
