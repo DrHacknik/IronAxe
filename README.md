@@ -13,7 +13,7 @@ On top of that, it is built on the 32bit architecture. Meaning that it will be a
 * Run the program and make sure that it downloads the necessary resources.
 After downloading, a Installer will show; this is the Java Portable Installer. Make sure it installs within the directory "\bin\commonfiles\Java" or "\bin\commonfiles\Java64."
 * Restart the program.
-* Now, create a profile using the profile_create option.
+* Now, create a profile using the Profile Management. 
 * Now, load said profile. You can choose to load it with portable Java, or not. It may ask you if you want to set it as the default profile to load.
 * **Optional:** You can set within the settings to load the default profile automatically when the program starts.
 * Done! Just login to your account, and play!
@@ -22,7 +22,7 @@ After downloading, a Installer will show; this is the Java Portable Installer. M
 ## FAQ:
 
 
-* I get an error stating that "We cannot find the file minecraft.jar." If this is the case, use an existing one you may have, or download it via minecraft.net. Make sure this file is placed within the "/bin" directory in the folder for the application. If you cannot find the .jar file on Minecraft's website, or on your PC; use this link ![here](https://github.com/zoltx23/IronAxe/raw/master/Common/Resources/Java_Launcher/minecraft.jar?raw=true) .
+* I get an error stating that "We cannot find the file minecraft.jar." If this is the case, use an existing one you may have, or within the Help Tab; press Download Resources. Make sure this file is placed within the "/bin" directory in the folder for the application. 
 * I get an error that has something to do with .NET Framework or a JIT error. Please report this error via GitHub in the issues section on the repository.
 
 ## Announcements: 
@@ -30,6 +30,20 @@ After downloading, a Installer will show; this is the Java Portable Installer. M
 * No new announcements 
 
 ## Versions: 
+
+### 1.8.1: 
+* Refined the Interface 
+* Added ability to hide and show the menu tab
+* Fixed some minor bugs
+* Refined the updater 
+* Fixed some issues with the download code. 
+(It didn't download the Minecraft.jar before hand.) 
+* Improved the profile management. You can now delete profiles. 
+* Improved overall performance. 
+* Working on the Extension Management. 
+* Added the option of having the Window to Minimize or stay open when launching Minecraft.
+* NOTE: I am also ridding of hte old Interface; but you can re-enable it if you wish to do so. 
+* Addeds some cute kittens.  
 
 ### 1.7: 
 * Fixed some bugs

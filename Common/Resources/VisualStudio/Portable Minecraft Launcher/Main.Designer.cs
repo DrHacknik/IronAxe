@@ -40,9 +40,9 @@
             this.btn_repair = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
             this.lbl_ver = new System.Windows.Forms.Label();
+            this.lbl_support = new System.Windows.Forms.Label();
             this.pnl = new System.Windows.Forms.PictureBox();
             this.pnl_logo = new System.Windows.Forms.Panel();
-            this.lbl_support = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pnl)).BeginInit();
             this.pnl_logo.SuspendLayout();
             this.SuspendLayout();
@@ -166,6 +166,19 @@
             this.lbl_ver.Text = "%VER%";
             this.btn_tooltip.SetToolTip(this.lbl_ver, "This is the Current Version that you\'re using.");
             // 
+            // lbl_support
+            // 
+            this.lbl_support.AutoSize = true;
+            this.lbl_support.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_support.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_support.ForeColor = System.Drawing.Color.Red;
+            this.lbl_support.Location = new System.Drawing.Point(368, 75);
+            this.lbl_support.Name = "lbl_support";
+            this.lbl_support.Size = new System.Drawing.Size(390, 12);
+            this.lbl_support.TabIndex = 8;
+            this.lbl_support.Text = "This old \'GUI\' is no longer supported or maintained. Please use the QTX GUI!";
+            this.btn_tooltip.SetToolTip(this.lbl_support, "This is the Current Version that you\'re using.");
+            // 
             // pnl
             // 
             this.pnl.BackColor = System.Drawing.Color.Transparent;
@@ -190,19 +203,6 @@
             this.pnl_logo.Size = new System.Drawing.Size(761, 88);
             this.pnl_logo.TabIndex = 15;
             this.pnl_logo.DoubleClick += new System.EventHandler(this.pnl_logo_DoubleClick);
-            // 
-            // lbl_support
-            // 
-            this.lbl_support.AutoSize = true;
-            this.lbl_support.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_support.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_support.ForeColor = System.Drawing.Color.Red;
-            this.lbl_support.Location = new System.Drawing.Point(368, 75);
-            this.lbl_support.Name = "lbl_support";
-            this.lbl_support.Size = new System.Drawing.Size(390, 12);
-            this.lbl_support.TabIndex = 8;
-            this.lbl_support.Text = "This old \'GUI\' is no longer supported or maintained. Please use the QTX GUI!";
-            this.btn_tooltip.SetToolTip(this.lbl_support, "This is the Current Version that you\'re using.");
             // 
             // Main
             // 

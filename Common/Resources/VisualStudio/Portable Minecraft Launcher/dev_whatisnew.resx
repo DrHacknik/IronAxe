@@ -119,6 +119,7 @@
   </resheader>
   <data name="lbl_new.Text" xml:space="preserve">
     <value> • Refined the Interface 
+ • Added ability to hide and show the menu tab
  • Fixed some minor bugs
  • Refined the updater 
  • Fixed issues with the download code

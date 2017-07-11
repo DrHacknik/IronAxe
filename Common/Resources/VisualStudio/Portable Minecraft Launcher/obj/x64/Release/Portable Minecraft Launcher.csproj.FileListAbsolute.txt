@@ -15,3 +15,5 @@ C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Mi
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x64\Release\Portable Minecraft Launcher.csprojResolveAssemblyReference.cache
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x64\Release\Portable_Minecraft_Launcher.dev_gui.resources
 C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\obj\x64\Release\Portable_Minecraft_Launcher.dev_whatisnew.resources
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x64\Release\MaterialSkin.dll
+C:\Users\Luke\Documents\GitHub\IronAxe\Common\Resources\VisualStudio\Portable Minecraft Launcher\bin\x64\Release\MaterialSkin.pdb

@@ -32,17 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dev_gui));
             this.tab_menu = new System.Windows.Forms.TabControl();
             this.tab_main = new System.Windows.Forms.TabPage();
+            this.btn_chck_upd = new System.Windows.Forms.Button();
+            this.btn_manage_prof_quick = new System.Windows.Forms.Button();
             this.lbl_jre = new System.Windows.Forms.Label();
             this.lbl_upd = new System.Windows.Forms.Label();
+            this.pcx_upd = new System.Windows.Forms.PictureBox();
             this.lbl_def = new System.Windows.Forms.Label();
             this.lbl_ver = new System.Windows.Forms.Label();
             this.tab_prof = new System.Windows.Forms.TabPage();
+            this.btn_del_prof = new System.Windows.Forms.Button();
             this.lbl_prof_create = new System.Windows.Forms.Label();
             this.chck_java = new System.Windows.Forms.CheckBox();
             this.pnl_divider = new System.Windows.Forms.Panel();
             this.txt_prof = new System.Windows.Forms.TextBox();
             this.cmb_prof = new System.Windows.Forms.ComboBox();
+            this.btn_load_prof = new System.Windows.Forms.Button();
+            this.btn_create_prof = new System.Windows.Forms.Button();
             this.tab_settings = new System.Windows.Forms.TabPage();
+            this.chck_min = new System.Windows.Forms.CheckBox();
             this.chck_runbck = new System.Windows.Forms.CheckBox();
             this.chck_qtx = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,39 +57,31 @@
             this.chck_overide_bit = new System.Windows.Forms.CheckBox();
             this.chck_upd = new System.Windows.Forms.CheckBox();
             this.chck_def_prof_st = new System.Windows.Forms.CheckBox();
+            this.btn_settings_apply = new System.Windows.Forms.Button();
+            this.btn_settings_reset = new System.Windows.Forms.Button();
             this.tab_help = new System.Windows.Forms.TabPage();
+            this.btn_help_get_help_oldschool = new System.Windows.Forms.Button();
+            this.btn_help_get_support = new System.Windows.Forms.Button();
+            this.btn_help_jre = new System.Windows.Forms.Button();
+            this.btn_help_down = new System.Windows.Forms.Button();
             this.lbl_help_header = new System.Windows.Forms.Label();
             this.tab_extensions = new System.Windows.Forms.TabPage();
             this.lbl_ext_body_two = new System.Windows.Forms.Label();
             this.lbl_ext_header_two = new System.Windows.Forms.Label();
             this.lbl_ext_body = new System.Windows.Forms.Label();
             this.lbl_ext_header = new System.Windows.Forms.Label();
-            this.sett_applied = new System.Windows.Forms.Timer(this.components);
-            this.lbl_main = new System.Windows.Forms.Label();
-            this.pnl_top = new System.Windows.Forms.Panel();
-            this.tab_dev_extensions = new System.Windows.Forms.TabPage();
-            this.lbl_dev_ext_header = new System.Windows.Forms.Label();
-            this.cmb_dev_ext = new System.Windows.Forms.ComboBox();
-            this.lbl_dev_ext_name = new System.Windows.Forms.Label();
-            this.lbl_dev_ext_name_body = new System.Windows.Forms.Label();
-            this.check_dir_ext = new System.Windows.Forms.Timer(this.components);
-            this.btn_chck_upd = new System.Windows.Forms.Button();
-            this.btn_manage_prof_quick = new System.Windows.Forms.Button();
-            this.pcx_upd = new System.Windows.Forms.PictureBox();
-            this.btn_del_prof = new System.Windows.Forms.Button();
-            this.btn_load_prof = new System.Windows.Forms.Button();
-            this.btn_create_prof = new System.Windows.Forms.Button();
-            this.btn_settings_apply = new System.Windows.Forms.Button();
-            this.btn_settings_reset = new System.Windows.Forms.Button();
-            this.btn_help_get_help_oldschool = new System.Windows.Forms.Button();
-            this.btn_help_get_support = new System.Windows.Forms.Button();
-            this.btn_help_jre = new System.Windows.Forms.Button();
-            this.btn_help_down = new System.Windows.Forms.Button();
             this.pcx_ext_logo = new System.Windows.Forms.PictureBox();
+            this.tab_dev_extensions = new System.Windows.Forms.TabPage();
             this.btn_dev_ext_Installnew = new System.Windows.Forms.Button();
             this.btn_dev_ext_del = new System.Windows.Forms.Button();
             this.btn_dev_ext_refresh = new System.Windows.Forms.Button();
+            this.lbl_dev_ext_name_body = new System.Windows.Forms.Label();
+            this.lbl_dev_ext_name = new System.Windows.Forms.Label();
             this.pcx_dev_ext_logo = new System.Windows.Forms.PictureBox();
+            this.cmb_dev_ext = new System.Windows.Forms.ComboBox();
+            this.lbl_dev_ext_header = new System.Windows.Forms.Label();
+            this.sett_applied = new System.Windows.Forms.Timer(this.components);
+            this.check_dir_ext = new System.Windows.Forms.Timer(this.components);
             this.pnl_ham = new System.Windows.Forms.Panel();
             this.indi = new System.Windows.Forms.PictureBox();
             this.btn_extensions = new System.Windows.Forms.Button();
@@ -90,26 +89,32 @@
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_profiles = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
-            this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_close = new System.Windows.Forms.PictureBox();
-            this.main_logo = new System.Windows.Forms.PictureBox();
-            this.chck_min = new System.Windows.Forms.CheckBox();
+            this.check_mx = new System.Windows.Forms.Timer(this.components);
+            this.btn_dev_ext_down = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
+            this.tab_dummy = new System.Windows.Forms.TabPage();
+            this.pnl_dummy_small = new System.Windows.Forms.Panel();
+            this.pnl_dummy_large = new System.Windows.Forms.Panel();
+            this.btn_showmenu = new System.Windows.Forms.Button();
+            this.btn_dummy_small = new System.Windows.Forms.Button();
+            this.btn_dummy_norm = new System.Windows.Forms.Button();
+            this.pnl_dummy_panel_norm = new System.Windows.Forms.Panel();
+            this.pnl_dummy_panel_large = new System.Windows.Forms.Panel();
             this.tab_menu.SuspendLayout();
             this.tab_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcx_upd)).BeginInit();
             this.tab_prof.SuspendLayout();
             this.tab_settings.SuspendLayout();
             this.tab_help.SuspendLayout();
             this.tab_extensions.SuspendLayout();
-            this.pnl_top.SuspendLayout();
-            this.tab_dev_extensions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcx_upd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcx_ext_logo)).BeginInit();
+            this.tab_dev_extensions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcx_dev_ext_logo)).BeginInit();
             this.pnl_ham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.main_logo)).BeginInit();
+            this.tab_dummy.SuspendLayout();
+            this.pnl_dummy_large.SuspendLayout();
+            this.pnl_dummy_panel_norm.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_menu
@@ -120,15 +125,15 @@
             this.tab_menu.Controls.Add(this.tab_help);
             this.tab_menu.Controls.Add(this.tab_extensions);
             this.tab_menu.Controls.Add(this.tab_dev_extensions);
-            this.tab_menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_menu.Controls.Add(this.tab_dummy);
             this.tab_menu.ItemSize = new System.Drawing.Size(0, 1);
-            this.tab_menu.Location = new System.Drawing.Point(251, 72);
+            this.tab_menu.Location = new System.Drawing.Point(251, 63);
             this.tab_menu.Margin = new System.Windows.Forms.Padding(0);
             this.tab_menu.Multiline = true;
             this.tab_menu.Name = "tab_menu";
             this.tab_menu.Padding = new System.Drawing.Point(0, 0);
             this.tab_menu.SelectedIndex = 0;
-            this.tab_menu.Size = new System.Drawing.Size(724, 319);
+            this.tab_menu.Size = new System.Drawing.Size(724, 328);
             this.tab_menu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tab_menu.TabIndex = 0;
             // 
@@ -144,17 +149,53 @@
             this.tab_main.Location = new System.Drawing.Point(4, 5);
             this.tab_main.Name = "tab_main";
             this.tab_main.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_main.Size = new System.Drawing.Size(716, 310);
+            this.tab_main.Size = new System.Drawing.Size(716, 319);
             this.tab_main.TabIndex = 0;
             this.tab_main.Text = "Main";
             this.tab_main.UseVisualStyleBackColor = true;
+            // 
+            // btn_chck_upd
+            // 
+            this.btn_chck_upd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_chck_upd.FlatAppearance.BorderSize = 0;
+            this.btn_chck_upd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_chck_upd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_chck_upd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_chck_upd.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_chck_upd.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Available_Updates_48;
+            this.btn_chck_upd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_chck_upd.Location = new System.Drawing.Point(464, 215);
+            this.btn_chck_upd.Name = "btn_chck_upd";
+            this.btn_chck_upd.Size = new System.Drawing.Size(248, 49);
+            this.btn_chck_upd.TabIndex = 8;
+            this.btn_chck_upd.Text = "Check for Updates";
+            this.btn_chck_upd.UseVisualStyleBackColor = true;
+            this.btn_chck_upd.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btn_manage_prof_quick
+            // 
+            this.btn_manage_prof_quick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_manage_prof_quick.FlatAppearance.BorderSize = 0;
+            this.btn_manage_prof_quick.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_manage_prof_quick.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_manage_prof_quick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_manage_prof_quick.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_manage_prof_quick.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_prof_quick.Image")));
+            this.btn_manage_prof_quick.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_manage_prof_quick.Location = new System.Drawing.Point(464, 264);
+            this.btn_manage_prof_quick.Name = "btn_manage_prof_quick";
+            this.btn_manage_prof_quick.Size = new System.Drawing.Size(248, 49);
+            this.btn_manage_prof_quick.TabIndex = 7;
+            this.btn_manage_prof_quick.Text = "Manage Profiles";
+            this.btn_manage_prof_quick.UseVisualStyleBackColor = true;
+            this.btn_manage_prof_quick.Click += new System.EventHandler(this.btn_manage_prof_quick_Click);
             // 
             // lbl_jre
             // 
             this.lbl_jre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_jre.AutoSize = true;
             this.lbl_jre.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jre.Location = new System.Drawing.Point(6, 132);
+            this.lbl_jre.Location = new System.Drawing.Point(6, 136);
             this.lbl_jre.Name = "lbl_jre";
             this.lbl_jre.Size = new System.Drawing.Size(155, 21);
             this.lbl_jre.TabIndex = 3;
@@ -165,19 +206,32 @@
             this.lbl_upd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_upd.AutoSize = true;
             this.lbl_upd.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_upd.Location = new System.Drawing.Point(35, 284);
+            this.lbl_upd.Location = new System.Drawing.Point(35, 293);
             this.lbl_upd.Name = "lbl_upd";
             this.lbl_upd.Size = new System.Drawing.Size(142, 19);
             this.lbl_upd.TabIndex = 2;
             this.lbl_upd.Text = "Checking for updates...";
             this.lbl_upd.Visible = false;
             // 
+            // pcx_upd
+            // 
+            this.pcx_upd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pcx_upd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcx_upd.BackgroundImage")));
+            this.pcx_upd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcx_upd.Location = new System.Drawing.Point(0, 288);
+            this.pcx_upd.Name = "pcx_upd";
+            this.pcx_upd.Size = new System.Drawing.Size(29, 31);
+            this.pcx_upd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcx_upd.TabIndex = 1;
+            this.pcx_upd.TabStop = false;
+            this.pcx_upd.Visible = false;
+            // 
             // lbl_def
             // 
             this.lbl_def.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_def.AutoSize = true;
             this.lbl_def.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_def.Location = new System.Drawing.Point(6, 95);
+            this.lbl_def.Location = new System.Drawing.Point(6, 99);
             this.lbl_def.Name = "lbl_def";
             this.lbl_def.Size = new System.Drawing.Size(107, 21);
             this.lbl_def.TabIndex = 0;
@@ -207,17 +261,34 @@
             this.tab_prof.Location = new System.Drawing.Point(4, 5);
             this.tab_prof.Name = "tab_prof";
             this.tab_prof.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_prof.Size = new System.Drawing.Size(716, 310);
+            this.tab_prof.Size = new System.Drawing.Size(726, 319);
             this.tab_prof.TabIndex = 1;
             this.tab_prof.Text = "Profiles";
             this.tab_prof.Click += new System.EventHandler(this.tab_prof_Click);
+            // 
+            // btn_del_prof
+            // 
+            this.btn_del_prof.FlatAppearance.BorderSize = 0;
+            this.btn_del_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_del_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_del_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_del_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_del_prof.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Delete_48;
+            this.btn_del_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_del_prof.Location = new System.Drawing.Point(6, 59);
+            this.btn_del_prof.Name = "btn_del_prof";
+            this.btn_del_prof.Size = new System.Drawing.Size(248, 49);
+            this.btn_del_prof.TabIndex = 12;
+            this.btn_del_prof.Text = "Delete Profile";
+            this.btn_del_prof.UseVisualStyleBackColor = true;
+            this.btn_del_prof.Click += new System.EventHandler(this.btn_del_prof_Click);
             // 
             // lbl_prof_create
             // 
             this.lbl_prof_create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_prof_create.AutoSize = true;
             this.lbl_prof_create.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_prof_create.Location = new System.Drawing.Point(407, 78);
+            this.lbl_prof_create.Location = new System.Drawing.Point(397, 78);
             this.lbl_prof_create.Name = "lbl_prof_create";
             this.lbl_prof_create.Size = new System.Drawing.Size(245, 15);
             this.lbl_prof_create.TabIndex = 11;
@@ -238,7 +309,7 @@
             // 
             this.pnl_divider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pnl_divider.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_divider.Location = new System.Drawing.Point(329, 0);
+            this.pnl_divider.Location = new System.Drawing.Point(324, 0);
             this.pnl_divider.Name = "pnl_divider";
             this.pnl_divider.Size = new System.Drawing.Size(3, 315);
             this.pnl_divider.TabIndex = 9;
@@ -248,7 +319,7 @@
             this.txt_prof.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_prof.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_prof.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_prof.Location = new System.Drawing.Point(411, 96);
+            this.txt_prof.Location = new System.Drawing.Point(401, 96);
             this.txt_prof.Name = "txt_prof";
             this.txt_prof.Size = new System.Drawing.Size(248, 23);
             this.txt_prof.TabIndex = 8;
@@ -264,6 +335,41 @@
             this.cmb_prof.TabIndex = 7;
             this.cmb_prof.Text = "Select a Profile";
             // 
+            // btn_load_prof
+            // 
+            this.btn_load_prof.FlatAppearance.BorderSize = 0;
+            this.btn_load_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_load_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_load_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_load_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_load_prof.Image = ((System.Drawing.Image)(resources.GetObject("btn_load_prof.Image")));
+            this.btn_load_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_load_prof.Location = new System.Drawing.Point(6, 6);
+            this.btn_load_prof.Name = "btn_load_prof";
+            this.btn_load_prof.Size = new System.Drawing.Size(248, 49);
+            this.btn_load_prof.TabIndex = 6;
+            this.btn_load_prof.Text = "Load Profile";
+            this.btn_load_prof.UseVisualStyleBackColor = true;
+            this.btn_load_prof.Click += new System.EventHandler(this.btn_load_profile_Click);
+            // 
+            // btn_create_prof
+            // 
+            this.btn_create_prof.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_create_prof.FlatAppearance.BorderSize = 0;
+            this.btn_create_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_create_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_create_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_create_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_create_prof.Image = ((System.Drawing.Image)(resources.GetObject("btn_create_prof.Image")));
+            this.btn_create_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_create_prof.Location = new System.Drawing.Point(401, 6);
+            this.btn_create_prof.Name = "btn_create_prof";
+            this.btn_create_prof.Size = new System.Drawing.Size(248, 49);
+            this.btn_create_prof.TabIndex = 5;
+            this.btn_create_prof.Text = "Create a new Profile";
+            this.btn_create_prof.UseVisualStyleBackColor = true;
+            this.btn_create_prof.Click += new System.EventHandler(this.btn_create_prof_Click);
+            // 
             // tab_settings
             // 
             this.tab_settings.Controls.Add(this.chck_min);
@@ -278,10 +384,21 @@
             this.tab_settings.Controls.Add(this.btn_settings_reset);
             this.tab_settings.Location = new System.Drawing.Point(4, 5);
             this.tab_settings.Name = "tab_settings";
-            this.tab_settings.Size = new System.Drawing.Size(716, 310);
+            this.tab_settings.Size = new System.Drawing.Size(726, 319);
             this.tab_settings.TabIndex = 2;
             this.tab_settings.Text = "Settings";
             this.tab_settings.UseVisualStyleBackColor = true;
+            // 
+            // chck_min
+            // 
+            this.chck_min.AutoSize = true;
+            this.chck_min.Enabled = false;
+            this.chck_min.Location = new System.Drawing.Point(32, 214);
+            this.chck_min.Name = "chck_min";
+            this.chck_min.Size = new System.Drawing.Size(129, 17);
+            this.chck_min.TabIndex = 15;
+            this.chck_min.Text = "Minimize the window?";
+            this.chck_min.UseVisualStyleBackColor = true;
             // 
             // chck_runbck
             // 
@@ -356,284 +473,6 @@
             this.chck_def_prof_st.UseVisualStyleBackColor = true;
             this.chck_def_prof_st.CheckedChanged += new System.EventHandler(this.chck_def_prof_st_CheckedChanged);
             // 
-            // tab_help
-            // 
-            this.tab_help.Controls.Add(this.btn_help_get_help_oldschool);
-            this.tab_help.Controls.Add(this.btn_help_get_support);
-            this.tab_help.Controls.Add(this.btn_help_jre);
-            this.tab_help.Controls.Add(this.btn_help_down);
-            this.tab_help.Controls.Add(this.lbl_help_header);
-            this.tab_help.Location = new System.Drawing.Point(4, 5);
-            this.tab_help.Name = "tab_help";
-            this.tab_help.Size = new System.Drawing.Size(716, 310);
-            this.tab_help.TabIndex = 3;
-            this.tab_help.Text = "Help";
-            this.tab_help.UseVisualStyleBackColor = true;
-            // 
-            // lbl_help_header
-            // 
-            this.lbl_help_header.AutoSize = true;
-            this.lbl_help_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_help_header.Location = new System.Drawing.Point(3, 0);
-            this.lbl_help_header.Name = "lbl_help_header";
-            this.lbl_help_header.Size = new System.Drawing.Size(184, 32);
-            this.lbl_help_header.TabIndex = 2;
-            this.lbl_help_header.Text = "Help & Support: ";
-            this.lbl_help_header.UseMnemonic = false;
-            // 
-            // tab_extensions
-            // 
-            this.tab_extensions.Controls.Add(this.lbl_ext_body_two);
-            this.tab_extensions.Controls.Add(this.lbl_ext_header_two);
-            this.tab_extensions.Controls.Add(this.lbl_ext_body);
-            this.tab_extensions.Controls.Add(this.lbl_ext_header);
-            this.tab_extensions.Controls.Add(this.pcx_ext_logo);
-            this.tab_extensions.Location = new System.Drawing.Point(4, 5);
-            this.tab_extensions.Name = "tab_extensions";
-            this.tab_extensions.Size = new System.Drawing.Size(716, 310);
-            this.tab_extensions.TabIndex = 4;
-            this.tab_extensions.Text = "Extensions";
-            this.tab_extensions.UseVisualStyleBackColor = true;
-            // 
-            // lbl_ext_body_two
-            // 
-            this.lbl_ext_body_two.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_ext_body_two.AutoSize = true;
-            this.lbl_ext_body_two.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ext_body_two.Location = new System.Drawing.Point(5, 206);
-            this.lbl_ext_body_two.Name = "lbl_ext_body_two";
-            this.lbl_ext_body_two.Size = new System.Drawing.Size(490, 95);
-            this.lbl_ext_body_two.TabIndex = 5;
-            this.lbl_ext_body_two.Text = resources.GetString("lbl_ext_body_two.Text");
-            // 
-            // lbl_ext_header_two
-            // 
-            this.lbl_ext_header_two.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_ext_header_two.AutoSize = true;
-            this.lbl_ext_header_two.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ext_header_two.Location = new System.Drawing.Point(3, 174);
-            this.lbl_ext_header_two.Name = "lbl_ext_header_two";
-            this.lbl_ext_header_two.Size = new System.Drawing.Size(179, 32);
-            this.lbl_ext_header_two.TabIndex = 4;
-            this.lbl_ext_header_two.Text = "What to expect: ";
-            // 
-            // lbl_ext_body
-            // 
-            this.lbl_ext_body.AutoSize = true;
-            this.lbl_ext_body.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ext_body.Location = new System.Drawing.Point(5, 32);
-            this.lbl_ext_body.Name = "lbl_ext_body";
-            this.lbl_ext_body.Size = new System.Drawing.Size(493, 95);
-            this.lbl_ext_body.TabIndex = 2;
-            this.lbl_ext_body.Text = resources.GetString("lbl_ext_body.Text");
-            // 
-            // lbl_ext_header
-            // 
-            this.lbl_ext_header.AutoSize = true;
-            this.lbl_ext_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ext_header.Location = new System.Drawing.Point(3, 0);
-            this.lbl_ext_header.Name = "lbl_ext_header";
-            this.lbl_ext_header.Size = new System.Drawing.Size(130, 32);
-            this.lbl_ext_header.TabIndex = 1;
-            this.lbl_ext_header.Text = "Extensions: ";
-            // 
-            // sett_applied
-            // 
-            this.sett_applied.Interval = 2000;
-            this.sett_applied.Tick += new System.EventHandler(this.sett_applied_Tick);
-            // 
-            // lbl_main
-            // 
-            this.lbl_main.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_main.AutoSize = true;
-            this.lbl_main.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_main.ForeColor = System.Drawing.Color.White;
-            this.lbl_main.Location = new System.Drawing.Point(74, 29);
-            this.lbl_main.Name = "lbl_main";
-            this.lbl_main.Size = new System.Drawing.Size(193, 20);
-            this.lbl_main.TabIndex = 1;
-            this.lbl_main.Text = "IronAxe: Minecraft Launcher";
-            // 
-            // pnl_top
-            // 
-            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(0)))));
-            this.pnl_top.Controls.Add(this.btn_minimize);
-            this.pnl_top.Controls.Add(this.btn_close);
-            this.pnl_top.Controls.Add(this.lbl_main);
-            this.pnl_top.Controls.Add(this.main_logo);
-            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_top.Location = new System.Drawing.Point(0, 0);
-            this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(975, 72);
-            this.pnl_top.TabIndex = 0;
-            // 
-            // tab_dev_extensions
-            // 
-            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_Installnew);
-            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_del);
-            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_refresh);
-            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_name_body);
-            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_name);
-            this.tab_dev_extensions.Controls.Add(this.pcx_dev_ext_logo);
-            this.tab_dev_extensions.Controls.Add(this.cmb_dev_ext);
-            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_header);
-            this.tab_dev_extensions.Location = new System.Drawing.Point(4, 5);
-            this.tab_dev_extensions.Name = "tab_dev_extensions";
-            this.tab_dev_extensions.Size = new System.Drawing.Size(716, 310);
-            this.tab_dev_extensions.TabIndex = 5;
-            this.tab_dev_extensions.Text = "tab_dev_extensions";
-            this.tab_dev_extensions.UseVisualStyleBackColor = true;
-            // 
-            // lbl_dev_ext_header
-            // 
-            this.lbl_dev_ext_header.AutoSize = true;
-            this.lbl_dev_ext_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dev_ext_header.Location = new System.Drawing.Point(3, 0);
-            this.lbl_dev_ext_header.Name = "lbl_dev_ext_header";
-            this.lbl_dev_ext_header.Size = new System.Drawing.Size(193, 32);
-            this.lbl_dev_ext_header.TabIndex = 2;
-            this.lbl_dev_ext_header.Text = "Extensions (DEV): ";
-            // 
-            // cmb_dev_ext
-            // 
-            this.cmb_dev_ext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_dev_ext.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_dev_ext.FormattingEnabled = true;
-            this.cmb_dev_ext.Location = new System.Drawing.Point(9, 45);
-            this.cmb_dev_ext.Name = "cmb_dev_ext";
-            this.cmb_dev_ext.Size = new System.Drawing.Size(248, 23);
-            this.cmb_dev_ext.Sorted = true;
-            this.cmb_dev_ext.TabIndex = 8;
-            this.cmb_dev_ext.Text = "%EXTENSIONS%";
-            this.cmb_dev_ext.SelectedIndexChanged += new System.EventHandler(this.cmb_dev_ext_SelectedIndexChanged);
-            // 
-            // lbl_dev_ext_name
-            // 
-            this.lbl_dev_ext_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_dev_ext_name.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dev_ext_name.Location = new System.Drawing.Point(57, 210);
-            this.lbl_dev_ext_name.Name = "lbl_dev_ext_name";
-            this.lbl_dev_ext_name.Size = new System.Drawing.Size(200, 32);
-            this.lbl_dev_ext_name.TabIndex = 10;
-            this.lbl_dev_ext_name.Text = "%NAME%";
-            this.lbl_dev_ext_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_dev_ext_name_body
-            // 
-            this.lbl_dev_ext_name_body.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_dev_ext_name_body.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dev_ext_name_body.Location = new System.Drawing.Point(9, 242);
-            this.lbl_dev_ext_name_body.Name = "lbl_dev_ext_name_body";
-            this.lbl_dev_ext_name_body.Size = new System.Drawing.Size(291, 63);
-            this.lbl_dev_ext_name_body.TabIndex = 11;
-            this.lbl_dev_ext_name_body.Text = "%NAME_BODY%";
-            this.lbl_dev_ext_name_body.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // check_dir_ext
-            // 
-            this.check_dir_ext.Tick += new System.EventHandler(this.check_dir_ext_Tick);
-            // 
-            // btn_chck_upd
-            // 
-            this.btn_chck_upd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_chck_upd.FlatAppearance.BorderSize = 0;
-            this.btn_chck_upd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_chck_upd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_chck_upd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_chck_upd.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_chck_upd.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Available_Updates_48;
-            this.btn_chck_upd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chck_upd.Location = new System.Drawing.Point(464, 206);
-            this.btn_chck_upd.Name = "btn_chck_upd";
-            this.btn_chck_upd.Size = new System.Drawing.Size(248, 49);
-            this.btn_chck_upd.TabIndex = 8;
-            this.btn_chck_upd.Text = "Check for Updates";
-            this.btn_chck_upd.UseVisualStyleBackColor = true;
-            this.btn_chck_upd.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // btn_manage_prof_quick
-            // 
-            this.btn_manage_prof_quick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_manage_prof_quick.FlatAppearance.BorderSize = 0;
-            this.btn_manage_prof_quick.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_manage_prof_quick.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_manage_prof_quick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_manage_prof_quick.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_manage_prof_quick.Image = ((System.Drawing.Image)(resources.GetObject("btn_manage_prof_quick.Image")));
-            this.btn_manage_prof_quick.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_manage_prof_quick.Location = new System.Drawing.Point(464, 255);
-            this.btn_manage_prof_quick.Name = "btn_manage_prof_quick";
-            this.btn_manage_prof_quick.Size = new System.Drawing.Size(248, 49);
-            this.btn_manage_prof_quick.TabIndex = 7;
-            this.btn_manage_prof_quick.Text = "Manage Profiles";
-            this.btn_manage_prof_quick.UseVisualStyleBackColor = true;
-            this.btn_manage_prof_quick.Click += new System.EventHandler(this.btn_manage_prof_quick_Click);
-            // 
-            // pcx_upd
-            // 
-            this.pcx_upd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcx_upd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcx_upd.BackgroundImage")));
-            this.pcx_upd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcx_upd.Location = new System.Drawing.Point(0, 279);
-            this.pcx_upd.Name = "pcx_upd";
-            this.pcx_upd.Size = new System.Drawing.Size(29, 31);
-            this.pcx_upd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcx_upd.TabIndex = 1;
-            this.pcx_upd.TabStop = false;
-            this.pcx_upd.Visible = false;
-            // 
-            // btn_del_prof
-            // 
-            this.btn_del_prof.FlatAppearance.BorderSize = 0;
-            this.btn_del_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_del_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_del_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_del_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del_prof.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Delete_48;
-            this.btn_del_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_del_prof.Location = new System.Drawing.Point(6, 59);
-            this.btn_del_prof.Name = "btn_del_prof";
-            this.btn_del_prof.Size = new System.Drawing.Size(248, 49);
-            this.btn_del_prof.TabIndex = 12;
-            this.btn_del_prof.Text = "Delete Profile";
-            this.btn_del_prof.UseVisualStyleBackColor = true;
-            this.btn_del_prof.Click += new System.EventHandler(this.btn_del_prof_Click);
-            // 
-            // btn_load_prof
-            // 
-            this.btn_load_prof.FlatAppearance.BorderSize = 0;
-            this.btn_load_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_load_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_load_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_load_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_load_prof.Image = ((System.Drawing.Image)(resources.GetObject("btn_load_prof.Image")));
-            this.btn_load_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_load_prof.Location = new System.Drawing.Point(6, 6);
-            this.btn_load_prof.Name = "btn_load_prof";
-            this.btn_load_prof.Size = new System.Drawing.Size(248, 49);
-            this.btn_load_prof.TabIndex = 6;
-            this.btn_load_prof.Text = "Load Profile";
-            this.btn_load_prof.UseVisualStyleBackColor = true;
-            this.btn_load_prof.Click += new System.EventHandler(this.btn_load_profile_Click);
-            // 
-            // btn_create_prof
-            // 
-            this.btn_create_prof.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_create_prof.FlatAppearance.BorderSize = 0;
-            this.btn_create_prof.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btn_create_prof.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_create_prof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_create_prof.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create_prof.Image = ((System.Drawing.Image)(resources.GetObject("btn_create_prof.Image")));
-            this.btn_create_prof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_prof.Location = new System.Drawing.Point(411, 6);
-            this.btn_create_prof.Name = "btn_create_prof";
-            this.btn_create_prof.Size = new System.Drawing.Size(248, 49);
-            this.btn_create_prof.TabIndex = 5;
-            this.btn_create_prof.Text = "Create a new Profile";
-            this.btn_create_prof.UseVisualStyleBackColor = true;
-            this.btn_create_prof.Click += new System.EventHandler(this.btn_create_prof_Click);
-            // 
             // btn_settings_apply
             // 
             this.btn_settings_apply.FlatAppearance.BorderSize = 0;
@@ -667,6 +506,20 @@
             this.btn_settings_reset.Text = "Reset Settings";
             this.btn_settings_reset.UseVisualStyleBackColor = true;
             this.btn_settings_reset.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tab_help
+            // 
+            this.tab_help.Controls.Add(this.btn_help_get_help_oldschool);
+            this.tab_help.Controls.Add(this.btn_help_get_support);
+            this.tab_help.Controls.Add(this.btn_help_jre);
+            this.tab_help.Controls.Add(this.btn_help_down);
+            this.tab_help.Controls.Add(this.lbl_help_header);
+            this.tab_help.Location = new System.Drawing.Point(4, 5);
+            this.tab_help.Name = "tab_help";
+            this.tab_help.Size = new System.Drawing.Size(726, 319);
+            this.tab_help.TabIndex = 3;
+            this.tab_help.Text = "Help";
+            this.tab_help.UseVisualStyleBackColor = true;
             // 
             // btn_help_get_help_oldschool
             // 
@@ -736,6 +589,73 @@
             this.btn_help_down.UseVisualStyleBackColor = true;
             this.btn_help_down.Click += new System.EventHandler(this.btn_help_down_Click);
             // 
+            // lbl_help_header
+            // 
+            this.lbl_help_header.AutoSize = true;
+            this.lbl_help_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_help_header.Location = new System.Drawing.Point(3, 0);
+            this.lbl_help_header.Name = "lbl_help_header";
+            this.lbl_help_header.Size = new System.Drawing.Size(184, 32);
+            this.lbl_help_header.TabIndex = 2;
+            this.lbl_help_header.Text = "Help & Support: ";
+            this.lbl_help_header.UseMnemonic = false;
+            // 
+            // tab_extensions
+            // 
+            this.tab_extensions.Controls.Add(this.lbl_ext_body_two);
+            this.tab_extensions.Controls.Add(this.lbl_ext_header_two);
+            this.tab_extensions.Controls.Add(this.lbl_ext_body);
+            this.tab_extensions.Controls.Add(this.lbl_ext_header);
+            this.tab_extensions.Controls.Add(this.pcx_ext_logo);
+            this.tab_extensions.Location = new System.Drawing.Point(4, 5);
+            this.tab_extensions.Name = "tab_extensions";
+            this.tab_extensions.Size = new System.Drawing.Size(716, 319);
+            this.tab_extensions.TabIndex = 4;
+            this.tab_extensions.Text = "Extensions";
+            this.tab_extensions.UseVisualStyleBackColor = true;
+            // 
+            // lbl_ext_body_two
+            // 
+            this.lbl_ext_body_two.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_ext_body_two.AutoSize = true;
+            this.lbl_ext_body_two.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ext_body_two.Location = new System.Drawing.Point(5, 215);
+            this.lbl_ext_body_two.Name = "lbl_ext_body_two";
+            this.lbl_ext_body_two.Size = new System.Drawing.Size(490, 95);
+            this.lbl_ext_body_two.TabIndex = 5;
+            this.lbl_ext_body_two.Text = resources.GetString("lbl_ext_body_two.Text");
+            // 
+            // lbl_ext_header_two
+            // 
+            this.lbl_ext_header_two.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_ext_header_two.AutoSize = true;
+            this.lbl_ext_header_two.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ext_header_two.Location = new System.Drawing.Point(3, 183);
+            this.lbl_ext_header_two.Name = "lbl_ext_header_two";
+            this.lbl_ext_header_two.Size = new System.Drawing.Size(179, 32);
+            this.lbl_ext_header_two.TabIndex = 4;
+            this.lbl_ext_header_two.Text = "What to expect: ";
+            // 
+            // lbl_ext_body
+            // 
+            this.lbl_ext_body.AutoSize = true;
+            this.lbl_ext_body.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ext_body.Location = new System.Drawing.Point(5, 32);
+            this.lbl_ext_body.Name = "lbl_ext_body";
+            this.lbl_ext_body.Size = new System.Drawing.Size(493, 95);
+            this.lbl_ext_body.TabIndex = 2;
+            this.lbl_ext_body.Text = resources.GetString("lbl_ext_body.Text");
+            // 
+            // lbl_ext_header
+            // 
+            this.lbl_ext_header.AutoSize = true;
+            this.lbl_ext_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ext_header.Location = new System.Drawing.Point(3, 0);
+            this.lbl_ext_header.Name = "lbl_ext_header";
+            this.lbl_ext_header.Size = new System.Drawing.Size(130, 32);
+            this.lbl_ext_header.TabIndex = 1;
+            this.lbl_ext_header.Text = "Extensions: ";
+            // 
             // pcx_ext_logo
             // 
             this.pcx_ext_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.Extensions_Folder_48;
@@ -744,10 +664,29 @@
             this.pcx_ext_logo.Enabled = false;
             this.pcx_ext_logo.Location = new System.Drawing.Point(0, 0);
             this.pcx_ext_logo.Name = "pcx_ext_logo";
-            this.pcx_ext_logo.Size = new System.Drawing.Size(716, 310);
+            this.pcx_ext_logo.Size = new System.Drawing.Size(716, 319);
             this.pcx_ext_logo.TabIndex = 3;
             this.pcx_ext_logo.TabStop = false;
             this.pcx_ext_logo.Click += new System.EventHandler(this.pcx_ext_logo_Click);
+            // 
+            // tab_dev_extensions
+            // 
+            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_down);
+            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_Installnew);
+            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_del);
+            this.tab_dev_extensions.Controls.Add(this.btn_dev_ext_refresh);
+            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_name_body);
+            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_name);
+            this.tab_dev_extensions.Controls.Add(this.pcx_dev_ext_logo);
+            this.tab_dev_extensions.Controls.Add(this.cmb_dev_ext);
+            this.tab_dev_extensions.Controls.Add(this.lbl_dev_ext_header);
+            this.tab_dev_extensions.Location = new System.Drawing.Point(4, 5);
+            this.tab_dev_extensions.Name = "tab_dev_extensions";
+            this.tab_dev_extensions.Size = new System.Drawing.Size(716, 319);
+            this.tab_dev_extensions.TabIndex = 5;
+            this.tab_dev_extensions.Text = "tab_dev_extensions";
+            this.tab_dev_extensions.UseVisualStyleBackColor = true;
+            this.tab_dev_extensions.Click += new System.EventHandler(this.tab_dev_extensions_Click);
             // 
             // btn_dev_ext_Installnew
             // 
@@ -757,13 +696,13 @@
             this.btn_dev_ext_Installnew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_dev_ext_Installnew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dev_ext_Installnew.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dev_ext_Installnew.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Download_481;
+            this.btn_dev_ext_Installnew.Image = ((System.Drawing.Image)(resources.GetObject("btn_dev_ext_Installnew.Image")));
             this.btn_dev_ext_Installnew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dev_ext_Installnew.Location = new System.Drawing.Point(465, 155);
+            this.btn_dev_ext_Installnew.Location = new System.Drawing.Point(445, 164);
             this.btn_dev_ext_Installnew.Name = "btn_dev_ext_Installnew";
             this.btn_dev_ext_Installnew.Size = new System.Drawing.Size(248, 49);
             this.btn_dev_ext_Installnew.TabIndex = 14;
-            this.btn_dev_ext_Installnew.Text = "Install new Extensions";
+            this.btn_dev_ext_Installnew.Text = "Install this Extension";
             this.btn_dev_ext_Installnew.UseVisualStyleBackColor = true;
             // 
             // btn_dev_ext_del
@@ -776,7 +715,7 @@
             this.btn_dev_ext_del.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dev_ext_del.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Delete_48;
             this.btn_dev_ext_del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dev_ext_del.Location = new System.Drawing.Point(465, 205);
+            this.btn_dev_ext_del.Location = new System.Drawing.Point(445, 214);
             this.btn_dev_ext_del.Name = "btn_dev_ext_del";
             this.btn_dev_ext_del.Size = new System.Drawing.Size(248, 49);
             this.btn_dev_ext_del.TabIndex = 13;
@@ -794,7 +733,7 @@
             this.btn_dev_ext_refresh.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dev_ext_refresh.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Available_Updates_48;
             this.btn_dev_ext_refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dev_ext_refresh.Location = new System.Drawing.Point(465, 253);
+            this.btn_dev_ext_refresh.Location = new System.Drawing.Point(445, 262);
             this.btn_dev_ext_refresh.Name = "btn_dev_ext_refresh";
             this.btn_dev_ext_refresh.Size = new System.Drawing.Size(248, 49);
             this.btn_dev_ext_refresh.TabIndex = 12;
@@ -802,12 +741,35 @@
             this.btn_dev_ext_refresh.UseVisualStyleBackColor = true;
             this.btn_dev_ext_refresh.Click += new System.EventHandler(this.btn_dev_ext_refresh_Click);
             // 
+            // lbl_dev_ext_name_body
+            // 
+            this.lbl_dev_ext_name_body.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbl_dev_ext_name_body.Font = new System.Drawing.Font("Segoe UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dev_ext_name_body.Location = new System.Drawing.Point(100, 242);
+            this.lbl_dev_ext_name_body.Name = "lbl_dev_ext_name_body";
+            this.lbl_dev_ext_name_body.Size = new System.Drawing.Size(116, 72);
+            this.lbl_dev_ext_name_body.TabIndex = 11;
+            this.lbl_dev_ext_name_body.Text = "%NAME_BODY%";
+            this.lbl_dev_ext_name_body.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_dev_ext_name
+            // 
+            this.lbl_dev_ext_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbl_dev_ext_name.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dev_ext_name.Location = new System.Drawing.Point(100, 201);
+            this.lbl_dev_ext_name.Name = "lbl_dev_ext_name";
+            this.lbl_dev_ext_name.Size = new System.Drawing.Size(116, 41);
+            this.lbl_dev_ext_name.TabIndex = 10;
+            this.lbl_dev_ext_name.Text = "%NAME%";
+            this.lbl_dev_ext_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pcx_dev_ext_logo
             // 
+            this.pcx_dev_ext_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pcx_dev_ext_logo.BackgroundImage = global::Portable_Minecraft_Launcher.Properties.Resources.dev_ext_no_logo;
-            this.pcx_dev_ext_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcx_dev_ext_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcx_dev_ext_logo.Image = ((System.Drawing.Image)(resources.GetObject("pcx_dev_ext_logo.Image")));
-            this.pcx_dev_ext_logo.Location = new System.Drawing.Point(100, 102);
+            this.pcx_dev_ext_logo.Location = new System.Drawing.Point(100, 96);
             this.pcx_dev_ext_logo.Name = "pcx_dev_ext_logo";
             this.pcx_dev_ext_logo.Size = new System.Drawing.Size(116, 102);
             this.pcx_dev_ext_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -815,21 +777,55 @@
             this.pcx_dev_ext_logo.TabStop = false;
             this.pcx_dev_ext_logo.UseWaitCursor = true;
             // 
+            // cmb_dev_ext
+            // 
+            this.cmb_dev_ext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_dev_ext.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_dev_ext.FormattingEnabled = true;
+            this.cmb_dev_ext.Location = new System.Drawing.Point(9, 45);
+            this.cmb_dev_ext.Name = "cmb_dev_ext";
+            this.cmb_dev_ext.Size = new System.Drawing.Size(248, 23);
+            this.cmb_dev_ext.Sorted = true;
+            this.cmb_dev_ext.TabIndex = 8;
+            this.cmb_dev_ext.Text = "%EXTENSIONS%";
+            this.cmb_dev_ext.SelectedIndexChanged += new System.EventHandler(this.cmb_dev_ext_SelectedIndexChanged);
+            // 
+            // lbl_dev_ext_header
+            // 
+            this.lbl_dev_ext_header.AutoSize = true;
+            this.lbl_dev_ext_header.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dev_ext_header.Location = new System.Drawing.Point(3, 0);
+            this.lbl_dev_ext_header.Name = "lbl_dev_ext_header";
+            this.lbl_dev_ext_header.Size = new System.Drawing.Size(193, 32);
+            this.lbl_dev_ext_header.TabIndex = 2;
+            this.lbl_dev_ext_header.Text = "Extensions (DEV): ";
+            // 
+            // sett_applied
+            // 
+            this.sett_applied.Interval = 2000;
+            this.sett_applied.Tick += new System.EventHandler(this.sett_applied_Tick);
+            // 
+            // check_dir_ext
+            // 
+            this.check_dir_ext.Enabled = true;
+            this.check_dir_ext.Tick += new System.EventHandler(this.check_dir_ext_Tick);
+            // 
             // pnl_ham
             // 
             this.pnl_ham.BackColor = System.Drawing.Color.Transparent;
             this.pnl_ham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_ham.BackgroundImage")));
             this.pnl_ham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_ham.Controls.Add(this.btn_showmenu);
+            this.pnl_ham.Controls.Add(this.btn_menu);
             this.pnl_ham.Controls.Add(this.indi);
             this.pnl_ham.Controls.Add(this.btn_extensions);
             this.pnl_ham.Controls.Add(this.btn_help);
             this.pnl_ham.Controls.Add(this.btn_settings);
             this.pnl_ham.Controls.Add(this.btn_profiles);
             this.pnl_ham.Controls.Add(this.btn_home);
-            this.pnl_ham.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_ham.Location = new System.Drawing.Point(0, 72);
+            this.pnl_ham.Location = new System.Drawing.Point(0, 63);
             this.pnl_ham.Name = "pnl_ham";
-            this.pnl_ham.Size = new System.Drawing.Size(251, 319);
+            this.pnl_ham.Size = new System.Drawing.Size(249, 328);
             this.pnl_ham.TabIndex = 1;
             // 
             // indi
@@ -843,7 +839,7 @@
             // 
             // btn_extensions
             // 
-            this.btn_extensions.BackColor = System.Drawing.Color.White;
+            this.btn_extensions.BackColor = System.Drawing.Color.Transparent;
             this.btn_extensions.FlatAppearance.BorderSize = 0;
             this.btn_extensions.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_extensions.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -861,6 +857,7 @@
             // 
             // btn_help
             // 
+            this.btn_help.BackColor = System.Drawing.Color.Transparent;
             this.btn_help.FlatAppearance.BorderSize = 0;
             this.btn_help.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_help.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -873,11 +870,12 @@
             this.btn_help.Size = new System.Drawing.Size(238, 49);
             this.btn_help.TabIndex = 2;
             this.btn_help.Text = "Help";
-            this.btn_help.UseVisualStyleBackColor = true;
+            this.btn_help.UseVisualStyleBackColor = false;
             this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
             // btn_settings
             // 
+            this.btn_settings.BackColor = System.Drawing.Color.Transparent;
             this.btn_settings.FlatAppearance.BorderSize = 0;
             this.btn_settings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_settings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -890,11 +888,12 @@
             this.btn_settings.Size = new System.Drawing.Size(238, 49);
             this.btn_settings.TabIndex = 2;
             this.btn_settings.Text = "Settings";
-            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.UseVisualStyleBackColor = false;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // btn_profiles
             // 
+            this.btn_profiles.BackColor = System.Drawing.Color.Transparent;
             this.btn_profiles.FlatAppearance.BorderSize = 0;
             this.btn_profiles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_profiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -907,11 +906,12 @@
             this.btn_profiles.Size = new System.Drawing.Size(238, 49);
             this.btn_profiles.TabIndex = 2;
             this.btn_profiles.Text = "Profiles";
-            this.btn_profiles.UseVisualStyleBackColor = true;
+            this.btn_profiles.UseVisualStyleBackColor = false;
             this.btn_profiles.Click += new System.EventHandler(this.btn_profiles_Click);
             // 
             // btn_home
             // 
+            this.btn_home.BackColor = System.Drawing.Color.Transparent;
             this.btn_home.FlatAppearance.BorderSize = 0;
             this.btn_home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -924,59 +924,148 @@
             this.btn_home.Size = new System.Drawing.Size(238, 49);
             this.btn_home.TabIndex = 2;
             this.btn_home.Text = "Home ";
-            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.UseVisualStyleBackColor = false;
             this.btn_home.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn_minimize
+            // check_mx
             // 
-            this.btn_minimize.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_minimize.BackgroundImage")));
-            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_minimize.Location = new System.Drawing.Point(899, 23);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(29, 26);
-            this.btn_minimize.TabIndex = 3;
-            this.btn_minimize.TabStop = false;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
-            this.btn_minimize.MouseLeave += new System.EventHandler(this.btn_minimize_MouseLeave);
-            this.btn_minimize.MouseHover += new System.EventHandler(this.btn_minimize_MouseHover);
+            this.check_mx.Enabled = true;
+            this.check_mx.Interval = 1;
+            this.check_mx.Tick += new System.EventHandler(this.check_mx_Tick);
             // 
-            // btn_close
+            // btn_dev_ext_down
             // 
-            this.btn_close.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_close.Location = new System.Drawing.Point(934, 23);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(29, 26);
-            this.btn_close.TabIndex = 2;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
-            this.btn_close.MouseHover += new System.EventHandler(this.btn_close_MouseHover);
+            this.btn_dev_ext_down.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_dev_ext_down.FlatAppearance.BorderSize = 0;
+            this.btn_dev_ext_down.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_dev_ext_down.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_dev_ext_down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dev_ext_down.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dev_ext_down.Image = global::Portable_Minecraft_Launcher.Properties.Resources.Download_481;
+            this.btn_dev_ext_down.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dev_ext_down.Location = new System.Drawing.Point(445, 109);
+            this.btn_dev_ext_down.Name = "btn_dev_ext_down";
+            this.btn_dev_ext_down.Size = new System.Drawing.Size(248, 49);
+            this.btn_dev_ext_down.TabIndex = 15;
+            this.btn_dev_ext_down.Text = "Download Extensions";
+            this.btn_dev_ext_down.UseVisualStyleBackColor = true;
             // 
-            // main_logo
+            // btn_menu
             // 
-            this.main_logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.main_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("main_logo.BackgroundImage")));
-            this.main_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.main_logo.Location = new System.Drawing.Point(3, 12);
-            this.main_logo.Name = "main_logo";
-            this.main_logo.Size = new System.Drawing.Size(65, 51);
-            this.main_logo.TabIndex = 0;
-            this.main_logo.TabStop = false;
+            this.btn_menu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_menu.FlatAppearance.BorderSize = 0;
+            this.btn_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_menu.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_menu.Image")));
+            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_menu.Location = new System.Drawing.Point(0, 5);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(238, 49);
+            this.btn_menu.TabIndex = 6;
+            this.btn_menu.Text = "Hide Menu";
+            this.btn_menu.UseVisualStyleBackColor = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
-            // chck_min
+            // tab_dummy
             // 
-            this.chck_min.AutoSize = true;
-            this.chck_min.Enabled = false;
-            this.chck_min.Location = new System.Drawing.Point(32, 214);
-            this.chck_min.Name = "chck_min";
-            this.chck_min.Size = new System.Drawing.Size(129, 17);
-            this.chck_min.TabIndex = 15;
-            this.chck_min.Text = "Minimize the window?";
-            this.chck_min.UseVisualStyleBackColor = true;
+            this.tab_dummy.Controls.Add(this.btn_dummy_norm);
+            this.tab_dummy.Controls.Add(this.btn_dummy_small);
+            this.tab_dummy.Controls.Add(this.pnl_dummy_large);
+            this.tab_dummy.Controls.Add(this.pnl_dummy_small);
+            this.tab_dummy.Location = new System.Drawing.Point(4, 5);
+            this.tab_dummy.Name = "tab_dummy";
+            this.tab_dummy.Size = new System.Drawing.Size(716, 319);
+            this.tab_dummy.TabIndex = 6;
+            this.tab_dummy.Text = "tab_dummy";
+            this.tab_dummy.UseVisualStyleBackColor = true;
+            // 
+            // pnl_dummy_small
+            // 
+            this.pnl_dummy_small.Location = new System.Drawing.Point(3, 3);
+            this.pnl_dummy_small.Name = "pnl_dummy_small";
+            this.pnl_dummy_small.Size = new System.Drawing.Size(66, 328);
+            this.pnl_dummy_small.TabIndex = 10;
+            this.pnl_dummy_small.Visible = false;
+            // 
+            // pnl_dummy_large
+            // 
+            this.pnl_dummy_large.Controls.Add(this.pnl_dummy_panel_norm);
+            this.pnl_dummy_large.Location = new System.Drawing.Point(75, 3);
+            this.pnl_dummy_large.Name = "pnl_dummy_large";
+            this.pnl_dummy_large.Size = new System.Drawing.Size(249, 328);
+            this.pnl_dummy_large.TabIndex = 11;
+            this.pnl_dummy_large.Visible = false;
+            // 
+            // btn_showmenu
+            // 
+            this.btn_showmenu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showmenu.FlatAppearance.BorderSize = 0;
+            this.btn_showmenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_showmenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_showmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_showmenu.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showmenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_showmenu.Image")));
+            this.btn_showmenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_showmenu.Location = new System.Drawing.Point(0, 5);
+            this.btn_showmenu.Name = "btn_showmenu";
+            this.btn_showmenu.Size = new System.Drawing.Size(238, 49);
+            this.btn_showmenu.TabIndex = 7;
+            this.btn_showmenu.Text = "Show Menu";
+            this.btn_showmenu.UseVisualStyleBackColor = false;
+            this.btn_showmenu.Visible = false;
+            this.btn_showmenu.Click += new System.EventHandler(this.btn_showmenu_Click);
+            // 
+            // btn_dummy_small
+            // 
+            this.btn_dummy_small.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dummy_small.FlatAppearance.BorderSize = 0;
+            this.btn_dummy_small.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_dummy_small.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_dummy_small.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dummy_small.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dummy_small.Image = ((System.Drawing.Image)(resources.GetObject("btn_dummy_small.Image")));
+            this.btn_dummy_small.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dummy_small.Location = new System.Drawing.Point(461, 262);
+            this.btn_dummy_small.Name = "btn_dummy_small";
+            this.btn_dummy_small.Size = new System.Drawing.Size(63, 49);
+            this.btn_dummy_small.TabIndex = 12;
+            this.btn_dummy_small.UseVisualStyleBackColor = false;
+            // 
+            // btn_dummy_norm
+            // 
+            this.btn_dummy_norm.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dummy_norm.FlatAppearance.BorderSize = 0;
+            this.btn_dummy_norm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btn_dummy_norm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_dummy_norm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dummy_norm.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dummy_norm.Image = ((System.Drawing.Image)(resources.GetObject("btn_dummy_norm.Image")));
+            this.btn_dummy_norm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dummy_norm.Location = new System.Drawing.Point(461, 210);
+            this.btn_dummy_norm.Name = "btn_dummy_norm";
+            this.btn_dummy_norm.Size = new System.Drawing.Size(238, 49);
+            this.btn_dummy_norm.TabIndex = 13;
+            this.btn_dummy_norm.Text = "Help";
+            this.btn_dummy_norm.UseVisualStyleBackColor = false;
+            // 
+            // pnl_dummy_panel_norm
+            // 
+            this.pnl_dummy_panel_norm.Controls.Add(this.pnl_dummy_panel_large);
+            this.pnl_dummy_panel_norm.Location = new System.Drawing.Point(69, 63);
+            this.pnl_dummy_panel_norm.Name = "pnl_dummy_panel_norm";
+            this.pnl_dummy_panel_norm.Size = new System.Drawing.Size(724, 328);
+            this.pnl_dummy_panel_norm.TabIndex = 12;
+            this.pnl_dummy_panel_norm.Visible = false;
+            // 
+            // pnl_dummy_panel_large
+            // 
+            this.pnl_dummy_panel_large.Location = new System.Drawing.Point(251, 63);
+            this.pnl_dummy_panel_large.Name = "pnl_dummy_panel_large";
+            this.pnl_dummy_panel_large.Size = new System.Drawing.Size(906, 328);
+            this.pnl_dummy_panel_large.TabIndex = 13;
+            this.pnl_dummy_panel_large.Visible = false;
             // 
             // dev_gui
             // 
@@ -984,14 +1073,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(975, 391);
-            this.ControlBox = false;
-            this.Controls.Add(this.tab_menu);
             this.Controls.Add(this.pnl_ham);
-            this.Controls.Add(this.pnl_top);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.tab_menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "dev_gui";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IronAxe: Main ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dev_gui_FormClosing);
@@ -999,6 +1086,7 @@
             this.tab_menu.ResumeLayout(false);
             this.tab_main.ResumeLayout(false);
             this.tab_main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcx_upd)).EndInit();
             this.tab_prof.ResumeLayout(false);
             this.tab_prof.PerformLayout();
             this.tab_settings.ResumeLayout(false);
@@ -1007,18 +1095,15 @@
             this.tab_help.PerformLayout();
             this.tab_extensions.ResumeLayout(false);
             this.tab_extensions.PerformLayout();
-            this.pnl_top.ResumeLayout(false);
-            this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcx_ext_logo)).EndInit();
             this.tab_dev_extensions.ResumeLayout(false);
             this.tab_dev_extensions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcx_upd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcx_ext_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcx_dev_ext_logo)).EndInit();
             this.pnl_ham.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.main_logo)).EndInit();
+            this.tab_dummy.ResumeLayout(false);
+            this.pnl_dummy_large.ResumeLayout(false);
+            this.pnl_dummy_panel_norm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1055,11 +1140,6 @@
         private System.Windows.Forms.Label lbl_def;
         private System.Windows.Forms.Label lbl_jre;
         private System.Windows.Forms.CheckBox chck_qtx;
-        private System.Windows.Forms.PictureBox main_logo;
-        private System.Windows.Forms.Label lbl_main;
-        private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.PictureBox btn_minimize;
-        private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.TabPage tab_extensions;
         private System.Windows.Forms.Button btn_extensions;
         private System.Windows.Forms.Label lbl_prof_create;
@@ -1088,5 +1168,16 @@
         private System.Windows.Forms.Button btn_dev_ext_del;
         private System.Windows.Forms.Button btn_dev_ext_Installnew;
         private System.Windows.Forms.CheckBox chck_min;
+        private System.Windows.Forms.Timer check_mx;
+        private System.Windows.Forms.Button btn_dev_ext_down;
+        private System.Windows.Forms.Button btn_menu;
+        private System.Windows.Forms.TabPage tab_dummy;
+        private System.Windows.Forms.Panel pnl_dummy_large;
+        private System.Windows.Forms.Panel pnl_dummy_small;
+        private System.Windows.Forms.Button btn_showmenu;
+        private System.Windows.Forms.Button btn_dummy_small;
+        private System.Windows.Forms.Button btn_dummy_norm;
+        private System.Windows.Forms.Panel pnl_dummy_panel_norm;
+        private System.Windows.Forms.Panel pnl_dummy_panel_large;
     }
 }

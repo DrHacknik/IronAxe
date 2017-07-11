@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Portable_Minecraft_Launcher
 {
-    public partial class dev_gui : Form
+    public partial class dev_gui : MaterialForm
     {
         private string cd = Application.StartupPath;
         private bool is64Bit = System.Environment.Is64BitOperatingSystem;
@@ -95,19 +97,9 @@ namespace Portable_Minecraft_Launcher
             tab_menu.SelectedTab = tab_help;
         }
 
-        private void btn_close_MouseHover(object sender, EventArgs e)
-        {
-            btn_close.BackColor = Color.DarkGreen;
-        }
-
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_close_MouseLeave(object sender, EventArgs e)
-        {
-            btn_close.BackColor = Color.Transparent;
         }
 
         private void btn_minimize_Click(object sender, EventArgs e)
@@ -115,19 +107,13 @@ namespace Portable_Minecraft_Launcher
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btn_minimize_MouseHover(object sender, EventArgs e)
-        {
-            btn_minimize.BackColor = Color.DarkGreen;
-        }
-
-        private void btn_minimize_MouseLeave(object sender, EventArgs e)
-        {
-            btn_minimize.BackColor = Color.Transparent;
-        }
-
         private void dev_gui_Load(object sender, EventArgs e)
         {
+            MaterialSkinManager skinmgr = MaterialSkinManager.Instance;
+            skinmgr.Theme = MaterialSkinManager.Themes.LIGHT;
+            skinmgr.ColorScheme = new ColorScheme(Primary.Green800, Primary.Green900, Primary.Green500, Accent.Green200, TextShade.WHITE);
             tab_menu.SelectedTab = tab_main;
+
             lbl_ver.Text += Application.ProductVersion;
 
             if (Properties.Settings.Default.dev_what_new == Application.ProductVersion == false)
@@ -1359,6 +1345,73 @@ namespace Portable_Minecraft_Launcher
             {
                 chck_min.Enabled = false;
             }
+        }
+
+        private void check_mx_Tick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.Refresh();
+            }
+            else
+            {
+            }
+        }
+
+        private void tab_dev_extensions_Click(object sender, EventArgs e)
+        {
+            check_dir_ext.Stop();
+        }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            pnl_ham.Size = pnl_dummy_small.Size;
+            btn_menu.Visible = false;
+            btn_showmenu.Visible = true;
+
+            btn_home.Size = btn_dummy_small.Size;
+            btn_profiles.Size = btn_dummy_small.Size;
+            btn_extensions.Size = btn_dummy_small.Size;
+            btn_settings.Size = btn_dummy_small.Size;
+            btn_help.Size = btn_dummy_small.Size;
+            btn_menu.Size = btn_dummy_small.Size;
+            btn_showmenu.Size = btn_dummy_small.Size;
+
+            tab_menu.Size = pnl_dummy_panel_large.Size;
+            tab_menu.Location = pnl_dummy_panel_norm.Location;
+
+            btn_home.Text = "";
+            btn_profiles.Text = "";
+            btn_extensions.Text = "";
+            btn_settings.Text = "";
+            btn_help.Text = "";
+            btn_showmenu.Text = "";
+        }
+
+        private void btn_showmenu_Click(object sender, EventArgs e)
+        {
+            pnl_ham.Size = pnl_dummy_large.Size;
+            btn_menu.Visible = true;
+            btn_showmenu.Visible = false;
+
+            btn_home.Size = btn_dummy_norm.Size;
+            btn_profiles.Size = btn_dummy_norm.Size;
+            btn_extensions.Size = btn_dummy_norm.Size;
+            btn_settings.Size = btn_dummy_norm.Size;
+            btn_help.Size = btn_dummy_norm.Size;
+            btn_menu.Size = btn_dummy_norm.Size;
+            btn_showmenu.Size = btn_dummy_norm.Size;
+
+            tab_menu.Size = pnl_dummy_panel_norm.Size;
+            tab_menu.Location = pnl_dummy_panel_large.Location;
+
+            btn_home.Text = "Home";
+            btn_profiles.Text = "Profiles";
+            btn_extensions.Text = "Extensions";
+            btn_settings.Text = "Settings";
+            btn_help.Text = "Help";
+            btn_showmenu.Text = "Show Menu";
         }
     }
 }
